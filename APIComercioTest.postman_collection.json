@@ -1,0 +1,1996 @@
+{
+	"info": {
+		"_postman_id": "95930ab7-91d5-4727-a0e9-5ce096294463",
+		"name": "APIComercioTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Marcas",
+			"item": [
+				{
+					"name": "getList_marcas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "22734802-b3b3-4421-9a12-c3cb775df289",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "56d7b546-d0dd-441e-b7df-4a9d8ccdf0c0",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Pragma",
+								"value": "-H \"X-Akamai-Debug: ON\" -H \"Pragma: akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces, akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/marcas?",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"marcas"
+							],
+							"query": [
+								{
+									"key": "Pragma",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2a78c9f7-c8cf-4a7e-957b-64869d2c1eef",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c37d641f-f942-4437-a3e4-79e851e38bc2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "getList_productos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d30ee28c-65f9-441b-99d8-e9e525f2e4ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "44a8ec17-7387-495b-8333-2c344b79d47f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/producto",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_productos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "22734802-b3b3-4421-9a12-c3cb775df289",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0971ae0e-ad6f-4ef9-af1c-904e0742d6c9",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/producto/{{idProducto}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"producto",
+								"{{idProducto}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postProducto",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9b6a5460-9de2-42e4-8cd6-3fbb848f72a8",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "88f2e200-608a-4308-88ed-0746ae6f8e25",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "skupadre",
+									"value": "platillastest7",
+									"description": "Cantidad de piezas disponibles del producto.",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Lija Madera QACuvo",
+									"description": "Nombre del producto\n\n\n\n",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Es la prueba de api release 22-01-2019",
+									"description": "Descripción del producto",
+									"type": "text"
+								},
+								{
+									"key": "especificacionestecnicas",
+									"value": "plantillas QA lijas",
+									"description": "Texto enriquecido del producto",
+									"type": "text"
+								},
+								{
+									"key": "alto",
+									"value": "20.2",
+									"description": "Alto del paquete del producto.",
+									"type": "text"
+								},
+								{
+									"key": "ancho",
+									"value": "20.3",
+									"description": "Ancho del paquete del producto.",
+									"type": "text"
+								},
+								{
+									"key": "profundidad",
+									"value": "20.65",
+									"description": "Profundidad del paquete del producto.",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "20.09",
+									"description": "Peso del paquete del producto.",
+									"type": "text"
+								},
+								{
+									"key": "cantidad",
+									"value": "10",
+									"description": "Cantidad de piezas disponibles del producto.",
+									"type": "text"
+								},
+								{
+									"key": "ean",
+									"value": "lijastest1",
+									"description": "EAN o UPC del producto",
+									"type": "text"
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"description": "Estatus del producto,Valores disponibles activo/inactivo",
+									"type": "text"
+								},
+								{
+									"key": "embarque",
+									"value": "100",
+									"description": "Campo numérico que indica los días que toma empacar y entregar el pedido a la mensajería correspondiente. ",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "42216",
+									"description": "Id de la categoría del producto",
+									"type": "text"
+								},
+								{
+									"key": "filtro",
+									"value": "20002",
+									"description": "Id del filtro del producto (El idFiltro debe pertenecer al IDCategoria)",
+									"type": "text"
+								},
+								{
+									"key": "fotos[1][url]",
+									"value": "https://resources.claroshop.com/medios-plazavip/s2/10173/696631/5ac43e884d254-39003-1600x1600.jpg",
+									"description": "Array asociativo de fotografías del producto,\npor cada una es necesario ingresar la url y el orden de la foto\n",
+									"type": "text"
+								},
+								{
+									"key": "fotos[1][orden]",
+									"value": "1",
+									"description": "Array asociativo de fotografías del producto,\npor cada una es necesario ingresar la url y el orden de la foto\n",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "celular,android,prueba",
+									"description": "Palabras clave para seo del producto separadas por coma ej. zapatos,moda,hombre",
+									"type": "text"
+								},
+								{
+									"key": "preciopublicobase",
+									"value": "3500",
+									"description": "Precio público base del producto",
+									"type": "text"
+								},
+								{
+									"key": "preciopublicooferta",
+									"value": "3400",
+									"description": "Precio público oferta del producto",
+									"type": "text"
+								},
+								{
+									"key": "agregarmarca",
+									"value": "mimarca",
+									"description": "Agregar marca.. Este parámetro es enviado si es necesario agregar una marca personalizada para el producto",
+									"type": "text"
+								},
+								{
+									"key": "marca",
+									"value": "Lanix",
+									"description": "Marca del producto. Si no existe en el catálogo de marcas,\nse puede enviar un nombre de marca personal.\n",
+									"type": "text"
+								},
+								{
+									"key": "videos",
+									"value": "sssss",
+									"description": "URL del video del producto, en caso de que aplique",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "talla",
+									"value": "MEDIANO",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "color",
+									"value": "AZULQA",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[2][orden]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "fotos[3][orden]",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[4][orden]",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[5][orden]",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[6][orden]",
+									"value": "6",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[7][orden]",
+									"value": "7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[8][orden]",
+									"value": "8",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[9][orden]",
+									"value": "9",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[10[orden]",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[2][url]",
+									"value": "https://resources.claroshop.com/medios-plazavip/s2/10173/696631/5ac43e8a93f79-39004-1600x1600.jpg",
+									"type": "text"
+								},
+								{
+									"key": "fotos[3][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[4][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[5][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[6][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[7][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[8][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[9][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[10][url]",
+									"value": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/340424/340424.png,https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/983285/983285.jpg",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/producto",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putProducto",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d2c5ad59-7e03-470c-8fbf-aa8d1189d4a6",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "put release productotest2",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "20001",
+									"type": "text"
+								},
+								{
+									"key": "fotos[1][url]",
+									"value": "https://images.emojiterra.com/google/android-oreo/512px/1f986.png",
+									"type": "text"
+								},
+								{
+									"key": "fotos[1][orden]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/producto/{{idProducto}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"producto",
+								"{{idProducto}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putProductoEAN",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d2c5ad59-7e03-470c-8fbf-aa8d1189d4a6",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "put ean",
+									"type": "text"
+								},
+								{
+									"key": "fotos[1][url]",
+									"value": "https://www.claroshop.com/medios-plazavip/fotos/productos_sears1/original/2649273.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fotos[1][orden]",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/eanoperations/{{ean}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"eanoperations",
+								"{{ean}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_producto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "22734802-b3b3-4421-9a12-c3cb775df289",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "0971ae0e-ad6f-4ef9-af1c-904e0742d6c9",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/producto/3770",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"producto",
+								"3770"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2f5dcc6b-baa7-4392-a12a-2d5c8e7ecdfc",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fcdffafd-dd86-4dfd-aac8-1ed887968ab7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "getList_categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "22734802-b3b3-4421-9a12-c3cb775df289",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "005e7bfc-bfbd-40eb-925a-8b8d23f0e3e6",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/categorias",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fotos",
+			"item": [
+				{
+					"name": "getFotos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "981c6703-42d9-42dd-ae58-dd04f37e2adc",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/fotos/{{idProducto}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"fotos",
+								"{{idProducto}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postFotos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9c4183d6-6497-42ef-9159-f0bd569398c0",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idproducto",
+									"value": "803112",
+									"description": "Id del producto al que se le agregará la imagen.",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "https://miro.medium.com/max/790/1*uHzooF1EtgcKn9_XiSST4w.png",
+									"description": "Url de la ubicación de la imagen.",
+									"type": "text"
+								},
+								{
+									"key": "orden",
+									"value": "1",
+									"description": "Orden en que presentará en el portal ClaroShop.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/fotos",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"fotos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFotos ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b4a699f1-299c-4ecd-be44-c83774ed6333",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idproducto",
+									"value": "643142",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nombre",
+									"value": "rojo azul",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/fotos/{{idFoto}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"fotos",
+								"{{idFoto}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "623e9022-81dc-4b3c-abc2-49d87d09f1ba",
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "b056d5d3-d809-4c62-a7df-f75711c9d0ca",
+						"type": "text/javascript"
+					}
+				}
+			]
+		},
+		{
+			"name": "Colores ",
+			"item": [
+				{
+					"name": "getColores",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7acf8f3d-de34-481c-a207-ec6d94070325",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idproducto",
+									"value": "643142",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "rojo azul",
+									"type": "text"
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/colores/{{idProducto}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"colores",
+								"{{idProducto}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postColor",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9d4830e0-059a-4043-9603-61f4dd5b96d4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idproducto",
+									"value": "803112",
+									"description": "ID del producto al que se quiere asociar el color.",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "rojo azulqa11",
+									"description": "Nombre del color del producto.\nSi deseas que en el portal ClaroShop.com aparezca tu producto solo con talla, es necesario crear un color con nombre ​N/A.",
+									"type": "text"
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"description": "Estatus del producto. ​activo/inactivo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/colores",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"colores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putColor",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "60c50b46-2ff1-4f6c-bfff-ebabc37141c1",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "akamai",
+								"value": "-H \"X-Akamai-Debug: ON\" -H \"Pragma: akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces, akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "rojo UPDATE\n",
+									"description": "Nombre del color del producto.\nSi deseas que en el portal ClaroShop.com aparezca tu producto solo con talla, es necesario crear un color con nombre ​N/A.",
+									"type": "text"
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"description": "Estatus de la imagen.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/colores/{{idColor}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"colores",
+								"{{idColor}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "39689d9f-1bd6-4675-adf0-85fe21019d67",
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "ed11d642-1214-4a7a-bb77-b66b0b89d427",
+						"type": "text/javascript"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tallas",
+			"item": [
+				{
+					"name": "getTallas",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c7336aa4-ed10-43df-9377-76689a5cf1c2",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/tallas/{{idColor}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"tallas",
+								"{{idColor}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postTallas",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3f70fca7-e10e-4319-be1e-e07ca7c06c9e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idcolor",
+									"value": "55219",
+									"description": "Nombre del color relacionado con la talla. Si deseas que tu producto solo se muestre con talla. Debes asociar esta talla con el color ​N/A",
+									"type": "text"
+								},
+								{
+									"key": "talla",
+									"value": "mediana",
+									"description": "Descripción de la talla.",
+									"type": "text"
+								},
+								{
+									"key": "sku",
+									"value": "supersku1",
+									"description": "SKU HIJO de la talla",
+									"type": "text"
+								},
+								{
+									"key": "ean",
+									"value": "skusuper",
+									"description": "EAN del producto con talla",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "200",
+									"description": "Precio extra del producto con talla",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "peso",
+									"value": "20",
+									"description": "Peso extra del producto con talla",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"description": "Estatus de la talla ​activo/inactivo",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "500",
+									"description": "Piezas disponibles de la talla, señalando que el stock de las tallas activas es el stock total del producto",
+									"type": "text"
+								},
+								{
+									"key": "prefijoprecio",
+									"value": "+",
+									"description": "Prefijo del precio (+,-)",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "prefijopeso",
+									"value": "-",
+									"description": "Prefijo del peso (+,-)",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "s",
+									"value": "ssss",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "jajaja",
+									"value": "mi prueba",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/tallas",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"tallas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putTallas",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b378388f-e24e-4db4-819d-e1f527f16f65",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idcolor",
+									"value": "17081",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "talla",
+									"value": "med",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sku",
+									"value": "supersku",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ean",
+									"value": "skusuper",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "precio",
+									"value": "200",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "peso",
+									"value": "20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "estatus",
+									"value": "activo",
+									"description": "Estatus de la talla ​activo/inactivo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stock",
+									"value": "100",
+									"description": "Piezas disponibles de la talla, señalando que el stock de las tallas activas es el stock total del producto",
+									"type": "text"
+								},
+								{
+									"key": "talla",
+									"value": "media na2",
+									"description": "Nombre de la talla del producto.",
+									"type": "text"
+								},
+								{
+									"key": "jsjsjsj",
+									"value": "jenene",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/tallas/{{idTalla}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"tallas",
+								"{{idTalla}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTalla",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f51da680-2ee4-4458-aaed-908e69ac4791",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "idcolor",
+									"value": "17081",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "talla",
+									"value": "med",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sku",
+									"value": "supersku",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ean",
+									"value": "skusuper",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "precio",
+									"value": "200",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "peso",
+									"value": "20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "estatus2",
+									"value": "activo",
+									"description": "Estatus de la talla ​activo/inactivo",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stock",
+									"value": "500",
+									"description": "Piezas disponibles de la talla, señalando que el stock de las tallas activas es el stock total del producto",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "talla",
+									"value": "media na2",
+									"description": "Nombre de la talla del producto.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/tallas/{{idTalla}}",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"tallas",
+								"{{idTalla}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pedidos_filtros",
+			"item": [
+				{
+					"name": "getPendientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Pragma",
+								"value": "akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces, akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no",
+								"type": "text"
+							},
+							{
+								"key": "X-Akamai-Debug",
+								"value": "ON",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/pedidosfiltros?action=pendientes&date_start=2019-01-12&date_end=2019-01-27",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"pedidosfiltros"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "pendientes"
+								},
+								{
+									"key": "date_start",
+									"value": "2019-01-12"
+								},
+								{
+									"key": "date_end",
+									"value": "2019-01-27"
+								}
+							]
+						},
+						"description": "es un filtro en un intervalo de 15 días de pedidos pendientes"
+					},
+					"response": []
+				},
+				{
+					"name": "getEmbarcados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/pedidosfiltros?action=embarcados&date_start=2018-07-31&date_end=2018-07-31",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"pedidosfiltros"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "embarcados"
+								},
+								{
+									"key": "date_start",
+									"value": "2018-07-31"
+								},
+								{
+									"key": "date_end",
+									"value": "2018-07-31"
+								}
+							]
+						},
+						"description": "es un filtro en un intervalo de 15 días de pedidos embarcados"
+					},
+					"response": []
+				},
+				{
+					"name": "getEntregados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/pedidosfiltros?action=entregados&date_start=2018-08-22&date_end=2018-08-30",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"pedidosfiltros"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "entregados"
+								},
+								{
+									"key": "date_start",
+									"value": "2018-08-22"
+								},
+								{
+									"key": "date_end",
+									"value": "2018-08-30"
+								}
+							]
+						},
+						"description": "es un filtro en un intervalo de 15 días de pedidos entregados"
+					},
+					"response": []
+				},
+				{
+					"name": "getListPendientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/pedidos?action=pendientes",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"pedidos"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "pendientes"
+								},
+								{
+									"key": "date_start",
+									"value": "2019-01-12",
+									"disabled": true
+								},
+								{
+									"key": "date_end",
+									"value": "2019-01-27",
+									"disabled": true
+								}
+							]
+						},
+						"description": "muestra todos los pedidos pendientes"
+					},
+					"response": []
+				},
+				{
+					"name": "getListEmbarcados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/pedidos?action=embarcados",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"pedidos"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "embarcados"
+								}
+							]
+						},
+						"description": "muestra todos los pedidos embarcados"
+					},
+					"response": []
+				},
+				{
+					"name": "getListEntregados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{urlambiente}}/apicm/v1/{{pubkey}}/{{hash256}}/{{time}}/pedidos?action=entregados",
+							"host": [
+								"{{urlambiente}}"
+							],
+							"path": [
+								"apicm",
+								"v1",
+								"{{pubkey}}",
+								"{{hash256}}",
+								"{{time}}",
+								"pedidos"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "entregados"
+								}
+							]
+						},
+						"description": "muestra todos los pedidos entregados"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "72e26131-6b25-4efc-9f00-b2a930cb1828",
+				"type": "text/javascript",
+				"exec": [
+					"var today = new Date();",
+					"var dd = today.getDate();",
+					"var mm = today.getMonth()+1; //January is 0!",
+					"var yyyy = today.getFullYear();",
+					"var h = today.getHours();",
+					"var m = today.getMinutes();",
+					"var s =today.getSeconds();",
+					"",
+					"if(h<10) {",
+					"    h = '0'+h",
+					"}",
+					"",
+					"if(m<10) {",
+					"    m = '0'+m",
+					"} ",
+					"",
+					"if(s<10) {",
+					"    s = '0'+s",
+					"} ",
+					"",
+					"if(dd<10) {",
+					"    dd = '0'+dd",
+					"} ",
+					"",
+					"if(mm<10) {",
+					"    mm = '0'+mm",
+					"} ",
+					"",
+					"today = yyyy + '-' + mm + '-' + dd + 'T' + h + ':' + m + ':' + s;",
+					"",
+					"",
+					"var hash = CryptoJS.SHA256('1d069cd9ee6c4b414a0cecfe76affc7b' + today + 'a53dd35be3789441fecab2d0b8fa8e98');",
+					"",
+					"",
+					"postman.setEnvironmentVariable('hash256', hash);",
+					"postman.setEnvironmentVariable('time', today);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "aca8816b-f0ba-4b58-a715-ca3adfa1916c",
+				"type": "text/javascript",
+				"exec": [
+					"var jsonData = pm.response.json();",
+					"  ",
+					"   tests[\"el estatus del servidor es un: \" +  responseCode.code]= responseCode.code === 200;",
+					"",
+					"   if (jsonData.errors) {",
+					"   tests[jsonData.errors] = jsonData.errors === \"success\" ;",
+					"",
+					"}",
+					"if (jsonData.estatus === \"error\"){",
+					"    tests[jsonData.estatus + \" : \" + jsonData.mensaje ] = jsonData.estatus === \"success\" || jsonData.mensaje === \"success\"; ",
+					"}",
+					"",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b50ef1f8-ef22-4ef8-af6b-fe7cb54ff209",
+			"key": "pubkey",
+			"value": "1d069cd9ee6c4b414a0cecfe76affc7b",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "3f636b8c-5b61-43ab-ac42-03638d14e4af",
+			"key": "hash256",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "0a1ff2b1-6f15-4f82-bcdc-d855156e92f3",
+			"key": "time",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
