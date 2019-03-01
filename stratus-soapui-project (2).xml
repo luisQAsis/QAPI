@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="4f61c741-22d6-49b3-90c5-a527bc6c7cca" activeEnvironment="Default" name="stratus" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:WsdlInterface" id="5e10fa4a-b440-40a4-8620-dca33aef22b5" wsaVersion="NONE" name="ServicioSoap12" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap12" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="5e10fa4a-b440-40a4-8620-dca33aef22b5" wsaVersion="200408" name="ServicioSoap12" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap12" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl">
       <con:part>
@@ -969,7 +969,7 @@
       </tem:ActualizaItem>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ActualizaItemRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ActualizaItemRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="ad6c8781-1528-4e25-b0f2-c01f24dd5720" isOneWay="false" action="http://tempuri.org/CancelaItem" name="CancelaItem" bindingOperationName="CancelaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1016,7 +1016,7 @@
       </tem:CancelaItem>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/CancelaItemRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/CancelaItemRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="e73e23b5-2e52-419a-a84f-a5f644a52bd1" isOneWay="false" action="http://tempuri.org/HelloWorld" name="HelloWorld" bindingOperationName="HelloWorld" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1031,7 +1031,7 @@
       <tem:HelloWorld/>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/HelloWorldRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/HelloWorldRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="aae14af6-c31d-44f9-abf2-1da1b1fada62" isOneWay="false" action="http://tempuri.org/ObtenePickUpExistencias" name="ObtenePickUpExistencias" bindingOperationName="ObtenePickUpExistencias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1066,7 +1066,7 @@
       </tem:ObtenePickUpExistencias>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenePickUpExistenciasRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenePickUpExistenciasRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="a1d5cca4-5603-4d2c-8c34-4500c32dac89" isOneWay="false" action="http://tempuri.org/ObtenerEmpleado" name="ObtenerEmpleado" bindingOperationName="ObtenerEmpleado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1100,7 +1100,7 @@
       </tem:ObtenerEmpleado>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerEmpleadoRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerEmpleadoRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="01f1ace2-be25-4076-a375-7b9c241b28c8" isOneWay="false" action="http://tempuri.org/ObtenerExistencias" name="ObtenerExistencias" bindingOperationName="ObtenerExistencias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1134,7 +1134,7 @@
       </tem:ObtenerExistencias>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerExistenciasRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerExistenciasRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="9ed76e68-6ee6-4ba3-b96f-b93e8c9bc8c5" isOneWay="false" action="http://tempuri.org/ObtenerInfoCuenta" name="ObtenerInfoCuenta" bindingOperationName="ObtenerInfoCuenta" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1177,7 +1177,7 @@
       </tem:ObtenerInfoCuenta>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerInfoCuentaRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerInfoCuentaRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="f30ac8c9-5708-42ba-aedf-11f70c361804" isOneWay="false" action="http://tempuri.org/ObtenerListaEventosMesaRegalos" name="ObtenerListaEventosMesaRegalos" bindingOperationName="ObtenerListaEventosMesaRegalos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1218,7 +1218,7 @@
       </tem:ObtenerListaEventosMesaRegalos>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerListaEventosMesaRegalosRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerListaEventosMesaRegalosRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="f92d0836-edde-465c-a9d6-c4cea38d16cb" isOneWay="false" action="http://tempuri.org/ObtenerListaSugerencias" name="ObtenerListaSugerencias" bindingOperationName="ObtenerListaSugerencias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1259,7 +1259,7 @@
       </tem:ObtenerListaSugerencias>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerListaSugerenciasRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerListaSugerenciasRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="dc79eb09-a3d5-4c3f-92ac-302ba98794e2" isOneWay="false" action="http://tempuri.org/ObtenerPlanesPago" name="ObtenerPlanesPago" bindingOperationName="ObtenerPlanesPago" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1293,7 +1293,7 @@
       </tem:ObtenerPlanesPago>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerPlanesPagoRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerPlanesPagoRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="cbda2fc7-0448-4ab9-af69-ffc11ea25d62" isOneWay="false" action="http://tempuri.org/ObtenerValidacionCliente" name="ObtenerValidacionCliente" bindingOperationName="ObtenerValidacionCliente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1353,7 +1353,7 @@
       </tem:ObtenerValidacionCliente>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerValidacionClienteRequest"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ServicioSoap/ObtenerValidacionClienteRequest"/>
       </con:call>
     </con:operation>
     <con:operation id="34417f20-fc5d-4e1c-ba86-e3f3eb03c6d4" isOneWay="false" action="http://tempuri.org/ProcesaStratus" name="ProcesaStratus" bindingOperationName="ProcesaStratus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1423,7 +1423,7 @@
       </con:call>
     </con:operation>
   </con:interface>
-  <con:interface xsi:type="con:WsdlInterface" id="d246c5fe-b2b6-41a7-9c2b-3c2b7f6e7c87" wsaVersion="NONE" name="ServicioSoap" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="d246c5fe-b2b6-41a7-9c2b-3c2b7f6e7c87" wsaVersion="200408" name="ServicioSoap" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart="file:\C:\Users\luisq\Desktop\wsdl\startus.wsdl">
       <con:part>
@@ -2511,7 +2511,7 @@
       </tem:ObtenePickUpExistencias>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenePickUpExistencias"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenePickUpExistencias"/>
       </con:call>
     </con:operation>
     <con:operation id="4419646a-5869-46f5-801b-9abda8e97bb9" isOneWay="false" action="http://tempuri.org/ObtenerEmpleado" name="ObtenerEmpleado" bindingOperationName="ObtenerEmpleado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2545,7 +2545,7 @@
       </tem:ObtenerEmpleado>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerEmpleado"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerEmpleado"/>
       </con:call>
     </con:operation>
     <con:operation id="c17ba925-1b3f-40b1-baf9-02e8dba44617" isOneWay="false" action="http://tempuri.org/ObtenerExistencias" name="ObtenerExistencias" bindingOperationName="ObtenerExistencias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2579,7 +2579,7 @@
       </tem:ObtenerExistencias>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerExistencias"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerExistencias"/>
       </con:call>
     </con:operation>
     <con:operation id="9c1511b3-2494-4e78-87ca-977450fff1b2" isOneWay="false" action="http://tempuri.org/ObtenerInfoCuenta" name="ObtenerInfoCuenta" bindingOperationName="ObtenerInfoCuenta" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2622,7 +2622,7 @@
       </tem:ObtenerInfoCuenta>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerInfoCuenta"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerInfoCuenta"/>
       </con:call>
     </con:operation>
     <con:operation id="4963f182-3065-43a6-8086-5b2f89827d80" isOneWay="false" action="http://tempuri.org/ObtenerListaEventosMesaRegalos" name="ObtenerListaEventosMesaRegalos" bindingOperationName="ObtenerListaEventosMesaRegalos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2663,7 +2663,7 @@
       </tem:ObtenerListaEventosMesaRegalos>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerListaEventosMesaRegalos"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerListaEventosMesaRegalos"/>
       </con:call>
     </con:operation>
     <con:operation id="8713ff87-e1b3-4615-8ebc-406925cc72f9" isOneWay="false" action="http://tempuri.org/ObtenerListaSugerencias" name="ObtenerListaSugerencias" bindingOperationName="ObtenerListaSugerencias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2704,7 +2704,7 @@
       </tem:ObtenerListaSugerencias>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerListaSugerencias"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerListaSugerencias"/>
       </con:call>
     </con:operation>
     <con:operation id="b1fda9bd-b362-4186-8bb2-1a0db44f33ea" isOneWay="false" action="http://tempuri.org/ObtenerPlanesPago" name="ObtenerPlanesPago" bindingOperationName="ObtenerPlanesPago" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2738,7 +2738,7 @@
       </tem:ObtenerPlanesPago>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerPlanesPago"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerPlanesPago"/>
       </con:call>
     </con:operation>
     <con:operation id="3c944543-b036-4fa2-9bf8-4b0b4c459b66" isOneWay="false" action="http://tempuri.org/ObtenerValidacionCliente" name="ObtenerValidacionCliente" bindingOperationName="ObtenerValidacionCliente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2798,7 +2798,7 @@
       </tem:ObtenerValidacionCliente>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerValidacionCliente"/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObtenerValidacionCliente"/>
       </con:call>
     </con:operation>
     <con:operation id="507f6d09-d9f9-4743-893f-e025b575324c" isOneWay="false" action="http://tempuri.org/ProcesaStratus" name="ProcesaStratus" bindingOperationName="ProcesaStratus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -2868,11 +2868,11 @@
       </con:call>
     </con:operation>
   </con:interface>
-  <con:mockService id="460b4931-82c7-4e05-8cfe-c8908cd6c994" port="443" path="/mockServicioSoap" host="https://luiscr7.catcoderphp.com/stratus" name="MockStratus" bindToHostOnly="false" docroot="">
+  <con:mockService id="460b4931-82c7-4e05-8cfe-c8908cd6c994" port="443" path="/mockServicioSoap" host="https://luiscr7.catcoderphp.com/stratus" name="MockStratus" bindToHostOnly="false" docroot="" incomingWss="" outgoingWss="">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
-    </con:settings>
-    <con:properties/>
+    <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-version">true</con:setting></con:settings>
+    <con:properties><con:property><con:name>version</con:name><con:value>1.2</con:value></con:property></con:properties>
     <con:mockOperation name="ActualizaItem" id="754dd7d8-fdf7-480b-83fa-a970e0611eba" interface="ServicioSoap" operation="ActualizaItem">
       <con:settings/>
       <con:defaultResponse>Response 1</con:defaultResponse>
@@ -5183,7 +5183,7 @@ declare namespace tem='http://tempuri.org/';
 //tem:sNoCuenta</con:query><con:match>370262521059582</con:match><con:response>Stolen Card, Pick up</con:response></con:query><con:query><con:name>Accept</con:name><con:query>declare namespace tem="http://tempuri.org/"
 //tem:sNoCuenta</con:query><con:match>4111111111111111</con:match><con:response>Accept</con:response></con:query><con:query><con:name>Departamentales</con:name><con:query>declare namespace tem="http://tempuri.org/"
 //tem:sNoCuenta</con:query><con:match>505050505050</con:match><con:response>Departamentales</con:response></con:query><con:query><con:name>Sanborns</con:name><con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query><con:match>720001658910</con:match><con:response>Sanborns</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/>
+//tem:sNoCuenta</con:query><con:match>720001658910</con:match><con:response>Sanborns</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties><con:property><con:name>version</con:name><con:value>1.2.1</con:value></con:property></con:properties>
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
