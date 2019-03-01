@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="4f61c741-22d6-49b3-90c5-a527bc6c7cca" activeEnvironment="Default" name="stratus" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings><con:setting id="WsdlSettings@cache-wsdls">false</con:setting></con:settings>
-  <con:interface xsi:type="con:WsdlInterface" id="5e10fa4a-b440-40a4-8620-dca33aef22b5" wsaVersion="200408" name="ServicioSoap12" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap12" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="5e10fa4a-b440-40a4-8620-dca33aef22b5" wsaVersion="NONE" name="ServicioSoap12" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap12" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     
     <con:endpoints>
@@ -503,7 +503,7 @@
       </con:call>
     </con:operation>
   </con:interface>
-  <con:interface xsi:type="con:WsdlInterface" id="d246c5fe-b2b6-41a7-9c2b-3c2b7f6e7c87" wsaVersion="200408" name="ServicioSoap" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="d246c5fe-b2b6-41a7-9c2b-3c2b7f6e7c87" wsaVersion="NONE" name="ServicioSoap" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     
     <con:endpoints>
@@ -1032,7 +1032,7 @@
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
     <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-version">false</con:setting></con:settings>
-    <con:properties><con:property><con:name>version</con:name><con:value>1.2</con:value></con:property></con:properties>
+    <con:properties><con:property><con:name>version</con:name><con:value>0.1</con:value></con:property></con:properties>
     <con:mockOperation name="ActualizaItem" id="754dd7d8-fdf7-480b-83fa-a970e0611eba" interface="ServicioSoap" operation="ActualizaItem">
       <con:settings/>
       <con:defaultResponse>Response 1</con:defaultResponse>
@@ -2335,7 +2335,7 @@ declare namespace tem='http://tempuri.org/';
 //tem:sNoCuenta</con:query><con:match>720001658910</con:match><con:response>Sanborns</con:response></con:query></con:dispatchConfig>
     </con:mockOperation>
   </con:mockService>
-  <con:mockService id="cca94a41-1350-4a40-b740-70b41d8a88bb" port="443" path="/mockServicioSoap12" host="https://luiscr7.catcoderphp.com/stratus" name="MockService12" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>1.2</con:value></con:property></con:properties><con:mockOperation name="ActualizaItem" id="ace04bf6-2f12-43c8-9b01-51dad0ae57de" interface="ServicioSoap12" operation="ActualizaItem"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="d0293e89-0d9b-4ebb-9144-720b64817168" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+  <con:mockService id="cca94a41-1350-4a40-b740-70b41d8a88bb" port="443" path="/mockServicioSoap12" host="https://luiscr7.catcoderphp.com/stratus" name="MockService12" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.1</con:value></con:property></con:properties><con:mockOperation name="ActualizaItem" id="ace04bf6-2f12-43c8-9b01-51dad0ae57de" interface="ServicioSoap12" operation="ActualizaItem"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="d0293e89-0d9b-4ebb-9144-720b64817168" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
    <soap:Header/>
    <soap:Body>
       <tem:ActualizaItemResponse>
@@ -3343,7 +3343,7 @@ declare namespace tem='http://tempuri.org/';
 //tem:sNoCuenta</con:query><con:match>370262521059582</con:match><con:response>Stolen Card, Pick up</con:response></con:query><con:query><con:name>Accept</con:name><con:query>declare namespace tem="http://tempuri.org/"
 //tem:sNoCuenta</con:query><con:match>4111111111111111</con:match><con:response>Accept</con:response></con:query><con:query><con:name>Departamentales</con:name><con:query>declare namespace tem="http://tempuri.org/"
 //tem:sNoCuenta</con:query><con:match>505050505050</con:match><con:response>Departamentales</con:response></con:query><con:query><con:name>Sanborns</con:name><con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query><con:match>720001658910</con:match><con:response>Sanborns</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties><con:property><con:name>version</con:name><con:value>1.2.1</con:value></con:property></con:properties>
+//tem:sNoCuenta</con:query><con:match>720001658910</con:match><con:response>Sanborns</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/>
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
