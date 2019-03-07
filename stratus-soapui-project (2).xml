@@ -503,7 +503,7 @@
       </con:call>
     </con:operation>
   </con:interface>
-  <con:interface xsi:type="con:WsdlInterface" id="d246c5fe-b2b6-41a7-9c2b-3c2b7f6e7c87" wsaVersion="NONE" name="ServicioSoap" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="d246c5fe-b2b6-41a7-9c2b-3c2b7f6e7c87" wsaVersion="NONE" name="ServicioSoap" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap" soapVersion="1_1" anonymous="optional" definition="https://github.com/luisQAsis/QAPI/blob/master/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     
     <con:endpoints>
