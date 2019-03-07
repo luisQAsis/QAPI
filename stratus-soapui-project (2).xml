@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="4f61c741-22d6-49b3-90c5-a527bc6c7cca" activeEnvironment="Default" name="stratus" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings><con:setting id="WsdlSettings@cache-wsdls">false</con:setting></con:settings>
-  <con:interface xsi:type="con:WsdlInterface" id="5e10fa4a-b440-40a4-8620-dca33aef22b5" wsaVersion="NONE" name="ServicioSoap12" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap12" soapVersion="1_2" anonymous="optional" definition="file:/C:/Users/luisq/Desktop/wsdl/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="5e10fa4a-b440-40a4-8620-dca33aef22b5" wsaVersion="NONE" name="ServicioSoap12" type="wsdl" bindingName="{http://tempuri.org/}ServicioSoap12" soapVersion="1_2" anonymous="optional" definition="https://github.com/luisQAsis/QAPI/blob/master/startus.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     
     <con:endpoints>
