@@ -156,8 +156,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/ValidacionAntifraude/VentaValidacionAntiFraude/ventaEstatusValidacionAntiFraudeRequest"/>
     <con:wsrmConfig version="1.2"/>
 </con:call>undefined</con:operation>undefined</con:interface>undefined<con:mockService id="27a4bc6b-fbf3-4783-a3d8-bd171e78e43c" port="4040" path="/mockLoginHogarSoapBinding" host="http://luis-ThinkPad-L460" name="LoginHogarSoapBinding MockService" bindToHostOnly="false" docroot="">undefined<con:settings>
-<con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting><con:name>version</con:name>
-<con:value>0.9</con:value></con:settings>undefined<con:properties/>undefined<con:mockOperation name="Login" id="e1358031-9cc8-48b9-a754-90d6c6ae3478" interface="LoginHogarSoapBinding" operation="Login">
+<con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>undefinedd<con:properties>undefined<con:property>
+<con:name>version</con:name>
+<con:value>0.9</con:value>undefined</con:property>undefined</con:properties</con:settings>undefined<con:properties/>undefined<con:mockOperation name="Login" id="e1358031-9cc8-48b9-a754-90d6c6ae3478" interface="LoginHogarSoapBinding" operation="Login">
 <con:settings/>
 <con:defaultResponse>Response 1</con:defaultResponse>
 <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
