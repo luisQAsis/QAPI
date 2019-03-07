@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="95c48c5a-f929-4781-a7cd-48ab868cbcb0" activeEnvironment="Default" name="telmex desarrollo" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="e56690f4-076e-46c9-97a1-aa8b8198eb87" wsaVersion="NONE" name="LoginHogarSoapBinding" type="wsdl" bindingName="{http://200.57.163.25/WSPromo/services/LoginHogar}LoginHogarSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://200.57.163.25/WSPromo/services/LoginHogar?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:endpoints>
+      <con:endpoint>http://200.57.141.31/WSPromo/services/LoginHogar</con:endpoint>
+    <con:endpoint>http://200.57.163.25/WSPromo/services/LoginHogar</con:endpoint><con:endpoint>http://https://luiscr7.catcoderphp.com/telmexDesarrollo2:8080/mockLoginHogarSoapBinding</con:endpoint><con:endpoint>http://luis-ThinkPad-L460:8088/mockLoginHogarSoapBinding</con:endpoint></con:endpoints>
+    <con:operation id="a273c6f7-1f0d-4c86-b922-0ec9c4cd4874" isOneWay="false" action="" name="Login" bindingOperationName="Login" type="Request-Response" outputName="LoginResponse" inputName="LoginRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="26a42043-60e6-4b0d-b7b3-4fdac711c634" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://127.0.0.1:8088/mockLoginHogarSoapBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.server.tiendaenlinea.telmex.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:Login soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <pstXmlSolicitud xsi:type="xsd:string"><![CDATA[<root><accion>AUT</accion><cveComercio>2030</cveComercio>
+         <usuario>5554281302</usuario>
+         <pwd></pwd>
+         <ip>192.168.56.1</ip>
+         <puerto>52700</puerto>
+         </root>]]]]>><![CDATA[</pstXmlSolicitud>
+      </ws:Login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/LoginHogar/LoginHogar/LoginRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="6af39ba3-2b18-457e-bc16-9c1e93666f2f" wsaVersion="NONE" name="DatosTmxSoapBinding" type="wsdl" bindingName="{http://200.57.163.25/WSPromo/services/DatosTmx}DatosTmxSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://200.57.163.25/WSPromo/services/DatosTmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:endpoints>
+      <con:endpoint>http://200.57.141.31/WSPromo/services/DatosTmx</con:endpoint>
+    <con:endpoint>http://200.57.163.25/WSPromo/services/DatosTmx</con:endpoint></con:endpoints>
+    <con:operation id="ad6456bc-f22f-434c-a12c-7d3d002bfa0e" isOneWay="false" action="" name="GetDatos" bindingOperationName="GetDatos" type="Request-Response" outputName="GetDatosResponse" inputName="GetDatosRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="9ae6d5b0-6ff7-4991-8534-9fe2403ed1e2" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://200.57.163.25/WSPromo/services/DatosTmx</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.server.tiendaenlinea.telmex.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetDatos soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <pstXML xsi:type="xsd:string">
+         <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+         <root><acccion>LC</acccion><tel><cfoutput>5554281303</cfoutput></tel><cveComercio>2030</cveComercio></root>
+         ]]]]>><![CDATA[    
+         </pstXML>
+      </ws:GetDatos>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31//WSPromo/services/DatosTmx/DatosTmx/GetDatosRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="a5d77251-a0bf-4d2b-a212-6d168a9df5a6" wsaVersion="NONE" name="ValidacionAntifraudeSoapBinding" type="wsdl" bindingName="{http://200.57.163.25/WSPromo/services/ValidacionAntifraude}ValidacionAntifraudeSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://200.57.163.25/WSPromo/services/ValidacionAntifraude?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:endpoints>
+      <con:endpoint>http://127.0.0.1:8081/MockCreditoTmx</con:endpoint>
+    <con:endpoint>http://200.57.141.31/WSPromo/services/ValidacionAntifraude</con:endpoint><con:endpoint>http://200.57.163.25/WSPromo/services/ValidacionAntifraude</con:endpoint><con:endpoint>http://https://luiscr7.catcoderphp.com:8082/MockAntifraude</con:endpoint><con:endpoint>https://luiscr7.catcoderphp.com/telmexDesarrollo/MockAntifraude?WSDL</con:endpoint></con:endpoints>
+    <con:operation id="cb896c9d-01d4-4c22-88cc-6cc374e7a36d" isOneWay="false" action="" name="ventaEstatusValidacionAntiFraude" bindingOperationName="ventaEstatusValidacionAntiFraude" type="Request-Response" outputName="ventaEstatusValidacionAntiFraudeResponse" inputName="ventaEstatusValidacionAntiFraudeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="abaff3f9-c710-44cf-8916-9a0ce95e2a9a" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://200.57.163.25/WSPromo/services/ValidacionAntifraude</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.server.tiendaenlinea.telmex.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:ventaEstatusValidacionAntiFraude soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <pstXML xsi:type="xsd:string">
+         <![CDATA[
+		<root>
+			<compra>
+				<cveComercio>2030</cveComercio>
+		    		<fechaSolicitud>2017/04/05 18:31:27</fechaSolicitud>
+		    		<pedido>751023</pedido>
+		    		<montoTotalCompra>27023.52</montoTotalCompra>
+		    		<numProductos>3</numProductos>
+		    		<datosCliente>
+					<telefonoFact>5554281301</telefonoFact>
+					<tipoLinea>MiTelmex</tipoLinea>
+					<nombreFact>VAZQUEZ MOLINA  ELIA</nombreFact>
+					<direccionFact>C CENTRAL 32 BARR XALTOCAN XOCHIMILCO CDMX XOCHIMILCO DF CP: 16090</direccionFact>
+					<codPostalFact>16090</codPostalFact>
+					<estadoFact>DF</estadoFact>
+					<califCrediticia>E</califCrediticia>
+					<nombre>
+						<![CDATA[Pavel 1]]]]]]>><![CDATA[<![CDATA[>
+					</nombre>
+					<apePaterno>
+						<![CDATA[]]]]]]>><![CDATA[<![CDATA[>
+					</apePaterno>
+					<apeMaterno>
+						<![CDATA[]]]]]]>><![CDATA[<![CDATA[>
+					</apeMaterno>
+					<email>
+						<![CDATA[pavel.carrilloj@gmail.com]]]]]]>><![CDATA[<![CDATA[>
+					</email>
+					<calle>
+						<![CDATA[mariqueta linda]]]]]]>><![CDATA[<![CDATA[>
+					</calle>
+					<numExt>115</numExt>
+					<numInt></numInt>
+					<entreCalle1></entreCalle1>
+					<entreCalle2>NA</entreCalle2>
+					<colonia>
+						<![CDATA[Benito Juarez -La Aurora-]]]]]]>><![CDATA[<![CDATA[>
+					</colonia>
+					<delegacion>
+						<![CDATA[Nezahualcoyotl]]]]]]>><![CDATA[<![CDATA[>
+					</delegacion>
+					<municipio>
+						<![CDATA[Nezahualcoyotl]]]]]]>><![CDATA[<![CDATA[>
+					</municipio>
+					<ciudad>
+						<![CDATA[Ciudad Nezahualcoyotl]]]]]]>><![CDATA[<![CDATA[>
+					</ciudad>
+					<estado>
+						<![CDATA[Mexico]]]]]]>><![CDATA[<![CDATA[>
+					</estado>
+					<claveEstado>EM</claveEstado>
+					<codPostal>57000</codPostal>
+				</datosCliente>
+				<productos>
+					<producto>
+						<cveTienda>CN</cveTienda>
+						<familia>
+							<![CDATA[Smart TV]]]]]]>><![CDATA[<![CDATA[>
+						</familia>
+						<nombre>
+							<![CDATA[Pantalla Hisense Smart TV 4K 65CU6200  65-]]]]]]>><![CDATA[<![CDATA[>
+						</nombre>
+						<sku>616985</sku>
+						<ean>0</ean>
+						<iva>0</iva>
+						<formaPago>FIN</formaPago>
+						<meses>6</meses>
+						<pagoMensual>4250.93</pagoMensual>
+					</producto>
+					<producto>
+						<cveTienda>CR</cveTienda>
+						<familia>
+							<![CDATA[Fitness]]]]]]>><![CDATA[<![CDATA[>
+						</familia>
+						<nombre>
+							<![CDATA[Licras Correr  Puma Dama Speed 3 - 4 Tight W, color-talla: negro-CH]]]]]]>><![CDATA[<![CDATA[>
+						</nombre>
+						<sku>574166</sku>
+						<ean>0</ean>
+						<iva>0</iva>
+						<formaPago>FIN</formaPago>
+						<meses>6</meses>
+						<pagoMensual>126.50</pagoMensual>
+					</producto>
+					<producto>
+						<cveTienda>CR</cveTienda>
+						<familia>
+							<![CDATA[Fitness]]]]]]>><![CDATA[<![CDATA[>
+						</familia>
+						<nombre>
+							<![CDATA[Licras Correr  Puma Dama Speed 3 - 4 Tight W, color-talla: negro-CH]]]]]]>><![CDATA[<![CDATA[>
+						</nombre>
+						<sku>574166</sku>
+						<ean>0</ean>
+						<iva>0</iva>
+						<formaPago>FIN</formaPago>
+						<meses>6</meses>
+						<pagoMensual>126.50</pagoMensual>
+					</producto>
+				</productos>
+			</compra>
+		</root>
+         ]]]]>><![CDATA[</pstXML>
+      </ws:ventaEstatusValidacionAntiFraude>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/ValidacionAntifraude/VentaValidacionAntiFraude/ventaEstatusValidacionAntiFraudeRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  
+  
+  
+  <con:mockService id="7d5b12ed-de0b-498b-b79f-cad87f59c725" port="8088" path="/MockLogin" host="https://luiscr7.catcoderphp.com/telmexDesarrollo" name="MockLoginTmx2" bindToHostOnly="true" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-version">false</con:setting></con:settings><con:properties><con:property><con:name>Tomporary Target</con:name><con:value>123</con:value></con:property></con:properties><con:mockOperation name="Login" id="35d0857c-0fb6-454e-9414-342d55797203" interface="LoginHogarSoapBinding" operation="Login"><con:settings/><con:defaultResponse>mITMX0</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="mITMX0" id="b53e42a9-2559-46ee-b2b0-25997a4d6db7" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://200.57.141.31/WSPromo/services/LoginHogar">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:LoginResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <LoginReturn xsi:type="xsd:string"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		<root>
+		    <codigoWS>0</codigoWS>
+		    <tipo_reg>IVR</tipo_reg>
+		    <telAsociados>
+		        <principal>5554281302</principal>
+		    </telAsociados>
+		    <fecha_reg>20-01-2016</fecha_reg>
+		    <registro_mitmx>0</registro_mitmx>
+		</root>]]]]>><![CDATA[</LoginReturn>
+      </log:LoginResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/LoginHogar/LoginHogar/LoginResponse"/></con:response><con:response name="miTMX1" id="5512ca78-e345-451a-9110-251504b96fca" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://200.57.141.31/WSPromo/services/LoginHogar">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:LoginResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <LoginReturn xsi:type="xsd:string"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		<root>
+		    <codigoWS>0</codigoWS>
+		    <tipo_reg>IVR</tipo_reg>
+		    <telAsociados>
+		        <principal>5554281301</principal>
+		    </telAsociados>
+		    <fecha_reg>20-01-2016</fecha_reg>
+		    <registro_mitmx>2</registro_mitmx>
+		</root>]]]]>><![CDATA[</LoginReturn>
+      </log:LoginResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/LoginHogar/LoginHogar/LoginResponse"/></con:response><con:response name="miTMX2" id="9abdac3a-2469-4a5e-a509-48b6b6a89b55" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://200.57.141.31/WSPromo/services/LoginHogar">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:LoginResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <LoginReturn xsi:type="xsd:string"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+		<root>
+		    <codigoWS>0</codigoWS>
+		    <tipo_reg>IVR</tipo_reg>
+		    <telAsociados>
+		        <principal>5554281303</principal>
+		    </telAsociados>
+		    <fecha_reg>20-01-2016</fecha_reg>
+		    <registro_mitmx>2</registro_mitmx>
+		</root>]]]]>><![CDATA[</LoginReturn>
+      </log:LoginResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/LoginHogar/LoginHogar/LoginResponse"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>miTMX1</con:name><con:query>declare namespace ws='http://ws.server.tiendaenlinea.telmex.com';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXmlSolicitud/contains(text(),'5554281301')</con:query><con:match>true</con:match><con:response>miTMX1</con:response></con:query><con:query><con:name>miTMX0</con:name><con:query>declare namespace ws='http://ws.server.tiendaenlinea.telmex.com';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXmlSolicitud/contains(text(),'5554281302')</con:query><con:match>true</con:match><con:response>mITMX0</con:response></con:query><con:query><con:name>miTMX2</con:name><con:query>declare namespace ws='http://ws.server.tiendaenlinea.telmex.com';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXmlSolicitud/contains(text(),'5554281303')</con:query><con:match>true</con:match><con:response>miTMX2</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:mockService id="98928708-7869-49cb-9675-1fda0a1d43bb" port="8082" path="/MockAntifraude" host="https://luiscr7.catcoderphp.com/telmexDesarrollo" name="MockAntifraude2" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="ventaEstatusValidacionAntiFraude" id="c2fc3aef-71dd-48dd-8d72-268569e95c95" interface="ValidacionAntifraudeSoapBinding" operation="ventaEstatusValidacionAntiFraude"><con:settings/><con:defaultResponse>antifraudeAccept</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="antifraudeAccept" id="c2d7ac5e-ef65-49f8-be3d-3ddd8562d5c1" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:val="http://200.57.141.31/WSPromo/services/ValidacionAntifraude">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <val:ventaEstatusValidacionAntiFraudeResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ventaEstatusValidacionAntiFraudeReturn xsi:type="xsd:string"><![CDATA[<?xml version='1.0' encoding='UTF-8' ?>
+         		<root>
+         		<codigoWS>0</codigoWS>
+         		<codigoValAF>113</codigoValAF>
+         		<codigosValidacionesAF>
+         			<cod_110>OK</cod_110>
+         			<cod_111>OK</cod_111>
+         			<cod_112>OK</cod_112>
+         			<cod_113>NOK</cod_113>
+         			<cod_114>OK</cod_114>
+         			<cod_115>OK</cod_115>
+         			<cod_116>NOK</cod_116>
+         			<cod_117>OK</cod_117>
+         			<cod_118>OK</cod_118>
+         			<cod_120>OK</cod_120>
+         			<cod_121>OK</cod_121>
+         			<cod_404>NOK</cod_404>
+         		</codigosValidacionesAF>
+         		<datosPedido>
+         			<telefono>5555555555</telefono>
+         			<numPedido>751023</numPedido>
+         		</datosPedido>
+         	</root>
+         ]]]]>><![CDATA[</ventaEstatusValidacionAntiFraudeReturn>
+      </val:ventaEstatusValidacionAntiFraudeResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/ValidacionAntifraude/VentaValidacionAntiFraude/ventaEstatusValidacionAntiFraudeResponse"/></con:response><con:response name="Response 2" id="1564dc0e-138e-4267-901e-6803d4c66433" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:val="http://200.57.141.31/WSPromo/services/ValidacionAntifraude">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <val:ventaEstatusValidacionAntiFraudeResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ventaEstatusValidacionAntiFraudeReturn xsi:type="xsd:string">?</ventaEstatusValidacionAntiFraudeReturn>
+      </val:ventaEstatusValidacionAntiFraudeResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31/WSPromo/services/ValidacionAntifraude/VentaValidacionAntiFraude/ventaEstatusValidacionAntiFraudeResponse"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>antifraudeAccept</con:name><con:query>declare namespace ws='http://ws.server.tiendaenlinea.telmex.com';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXML/contains(text(),'5554281314')</con:query><con:match>true</con:match><con:response>antifraudeAccept</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:mockService id="822e71a4-9d72-4bfd-a2c4-03032f3f6708" port="8084" path="/MockCreditoTmx" host="https://luiscr7.catcoderphp.com/telmexDesarrollo" name="MockCreditoTmx2" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetDatos" id="1db65b18-6955-4879-a163-9d7aa490d8a1" interface="DatosTmxSoapBinding" operation="GetDatos"><con:settings/><con:defaultResponse>CodigoWS0</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="CodigoWS0" id="70e24751-0691-4e26-bc9c-7dbda6b9a8e2" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://200.57.141.31//WSPromo/services/DatosTmx">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:GetDatosResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <GetDatosReturn xsi:type="xsd:string"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+         <root>
+		    <codigoWS>0</codigoWS>
+		    <credito>
+		        <codigo>9</codigo>
+		        <limiteCredito>35000.0</limiteCredito>
+		        <creditoDis>34401.0</creditoDis>
+		        <saldoCredito>599.0</saldoCredito>
+		        <calificacionCrediticia>E</calificacionCrediticia>
+		        <creditoDisponibleAmpliado>51901.0</creditoDisponibleAmpliado>
+		        <iva>16</iva>
+		        <CteInfinitum>1</CteInfinitum>
+		        <ciclo_fact>14</ciclo_fact>
+		        <fecha_fact>20170420</fecha_fact>
+		        <saldoCompras_Sanbo>0.0</saldoCompras_Sanbo>
+		        <saldoCompras_Sears>0.0</saldoCompras_Sears>
+		        <saldoCompras_Claro>0.00</saldoCompras_Claro>
+		    </credito>
+		    <datosCliente>
+		        <telefono>5554281302</telefono>
+		        <division>W</division>
+		        <mail>RHMEZA@GMAIL.COM</mail>
+		        <nombretitular>VAZQUEZ MOLINA  ELIA           </nombretitular>
+		        <nombre>ELIA</nombre>
+		        <apTitular>VAZQUEZ</apTitular>
+		        <amTitular>MOLINA</amTitular>
+		        <direcc_facturacion>C CENTRAL 32 BARR XALTOCAN XOCHIMILCO CDMX XOCHIMILCO DF CP: 16090</direcc_facturacion>
+		        <calle></calle>
+		        <numExt></numExt>
+		        <numInt></numInt>
+		        <calle1></calle1>
+		        <calle2></calle2>
+		        <colonia></colonia>
+		        <delegacion></delegacion>
+		        <municipio></municipio>
+		        <ciudad></ciudad>
+		        <cveEsta>DF</cveEsta>
+		        <postal>16090</postal>
+		    </datosCliente>
+		</root>
+         ]]]]>><![CDATA[</GetDatosReturn>
+      </dat:GetDatosResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31//WSPromo/services/DatosTmx/DatosTmx/GetDatosResponse"/></con:response><con:response name="CodigoWS1" id="c343f52f-6c7a-4c3b-8900-51e4e6af40f2" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://200.57.141.31//WSPromo/services/DatosTmx">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:GetDatosResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <GetDatosReturn xsi:type="xsd:string"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+         <root>
+		    <codigoWS>0</codigoWS>
+		    <credito>
+		        <codigo>9</codigo>
+		        <limiteCredito>35000.0</limiteCredito>
+		        <creditoDis>34401.0</creditoDis>
+		        <saldoCredito>599.0</saldoCredito>
+		        <calificacionCrediticia>E</calificacionCrediticia>
+		        <creditoDisponibleAmpliado>51901.0</creditoDisponibleAmpliado>
+		        <iva>16</iva>
+		        <CteInfinitum>1</CteInfinitum>
+		        <ciclo_fact>14</ciclo_fact>
+		        <fecha_fact>20170420</fecha_fact>
+		        <saldoCompras_Sanbo>0.0</saldoCompras_Sanbo>
+		        <saldoCompras_Sears>0.0</saldoCompras_Sears>
+		        <saldoCompras_Claro>0.00</saldoCompras_Claro>
+		    </credito>
+		    <datosCliente>
+		        <telefono>5554281301</telefono>
+		        <division>W</division>
+		        <mail>RHMEZA@GMAIL.COM</mail>
+		        <nombretitular>VAZQUEZ MOLINA  ELIA           </nombretitular>
+		        <nombre>ELIA</nombre>
+		        <apTitular>VAZQUEZ</apTitular>
+		        <amTitular>MOLINA</amTitular>
+		        <direcc_facturacion>C CENTRAL 32 BARR XALTOCAN XOCHIMILCO CDMX XOCHIMILCO DF CP: 16090</direcc_facturacion>
+		        <calle></calle>
+		        <numExt></numExt>
+		        <numInt></numInt>
+		        <calle1></calle1>
+		        <calle2></calle2>
+		        <colonia></colonia>
+		        <delegacion></delegacion>
+		        <municipio></municipio>
+		        <ciudad></ciudad>
+		        <cveEsta>DF</cveEsta>
+		        <postal>16090</postal>
+		    </datosCliente>
+		</root>
+         ]]]]>><![CDATA[</GetDatosReturn>
+      </dat:GetDatosResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31//WSPromo/services/DatosTmx/DatosTmx/GetDatosResponse"/></con:response><con:response name="CodigoWS2" id="6d25a032-c9a5-476a-8cda-ef9e27303964" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://200.57.141.31//WSPromo/services/DatosTmx">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:GetDatosResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <GetDatosReturn xsi:type="xsd:string"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+         <root>
+		    <codigoWS>0</codigoWS>
+		    <credito>
+		        <codigo>9</codigo>
+		        <limiteCredito>35000.0</limiteCredito>
+		        <creditoDis>34401.0</creditoDis>
+		        <saldoCredito>599.0</saldoCredito>
+		        <calificacionCrediticia>E</calificacionCrediticia>
+		        <creditoDisponibleAmpliado>51901.0</creditoDisponibleAmpliado>
+		        <iva>16</iva>
+		        <CteInfinitum>1</CteInfinitum>
+		        <ciclo_fact>14</ciclo_fact>
+		        <fecha_fact>20170420</fecha_fact>
+		        <saldoCompras_Sanbo>0.0</saldoCompras_Sanbo>
+		        <saldoCompras_Sears>0.0</saldoCompras_Sears>
+		        <saldoCompras_Claro>0.00</saldoCompras_Claro>
+		    </credito>
+		    <datosCliente>
+		        <telefono>5554281303</telefono>
+		        <division>W</division>
+		        <mail>RHMEZA@GMAIL.COM</mail>
+		        <nombretitular>VAZQUEZ MOLINA  ELIA           </nombretitular>
+		        <nombre>ELIA</nombre>
+		        <apTitular>VAZQUEZ</apTitular>
+		        <amTitular>MOLINA</amTitular>
+		        <direcc_facturacion>C CENTRAL 32 BARR XALTOCAN XOCHIMILCO CDMX XOCHIMILCO DF CP: 16090</direcc_facturacion>
+		        <calle></calle>
+		        <numExt></numExt>
+		        <numInt></numInt>
+		        <calle1></calle1>
+		        <calle2></calle2>
+		        <colonia></colonia>
+		        <delegacion></delegacion>
+		        <municipio></municipio>
+		        <ciudad></ciudad>
+		        <cveEsta>DF</cveEsta>
+		        <postal>16090</postal>
+		    </datosCliente>
+		</root>
+         ]]]]>><![CDATA[</GetDatosReturn>
+      </dat:GetDatosResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.141.31//WSPromo/services/DatosTmx/DatosTmx/GetDatosResponse"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>CodigoWS0</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXML/contains(text(),'555428')</con:query><con:match>true</con:match><con:response>CodigoWS0</con:response></con:query><con:query><con:name>CodigoWS1</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXML/contains(text(),'555427')</con:query><con:match>true</con:match><con:response>CodigoWS1</con:response></con:query><con:query><con:name>CodigoWS2</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//pstXML/contains(text(),'555429')</con:query><con:match>true</con:match><con:response>CodigoWS2</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+<con:sensitiveInformation/></con:soapui-project>

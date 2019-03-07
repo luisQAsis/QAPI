@@ -443,7 +443,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://luiscr7.catcoderphp.com/stratus/mockServicioSoap12?WSDL</con:endpoint>
+        <con:endpoint>http://luis-ThinkPad-L460:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
    <soap:Header/>\r
    <soap:Body>\r
@@ -515,7 +515,7 @@
       <con:call id="0eb52322-fec3-447c-b8b3-ad1b109e3215" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -568,7 +568,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -623,7 +623,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -644,7 +644,7 @@
       <con:call id="caab4e29-70ab-4bac-a961-5a65b0d1ade7" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -679,7 +679,7 @@
       <con:call id="5d9f7a01-e70d-49e6-aeee-5c2a2d3d1e08" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -713,7 +713,7 @@
       <con:call id="f77ee023-1814-476d-a4a9-3b241621de07" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -747,7 +747,7 @@
       <con:call id="7e7b022c-0bc0-4e29-9206-8914d3cfdddd" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -790,7 +790,7 @@
       <con:call id="b93fc0a4-eb40-4515-96a6-b51b80b44683" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -831,7 +831,7 @@
       <con:call id="4bd1b239-eac2-4210-84a0-26eaa6e35ea8" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -872,7 +872,7 @@
       <con:call id="1970aef9-94bd-42e2-93f0-c9774fa1807e" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -906,7 +906,7 @@
       <con:call id="f8028e1d-7035-42ea-a78c-c2d6d59baff5" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint xsi:nil="true"/>
+        <con:endpoint>http://http://catcoderphp.com:8080:8088/mockServicioSoap12</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
