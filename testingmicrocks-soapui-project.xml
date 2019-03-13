@@ -794,7 +794,7 @@
          <tem:HelloWorldResult>?</tem:HelloWorldResult>
       </tem:HelloWorldResponse>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HelloWorld"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="ProcesaStratus" id="6d178787-82c2-42e0-a00e-5bff61efefb6" interface="ServicioSoap" operation="ProcesaStratus"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Stratus Response" id="5d48035c-d238-4d91-8e78-6548933f7bed" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/HelloWorld"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="ProcesaStratus" id="6d178787-82c2-42e0-a00e-5bff61efefb6" interface="ServicioSoap" operation="ProcesaStratus"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="Stratus Response" id="5d48035c-d238-4d91-8e78-6548933f7bed" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratusResponse>
@@ -824,4 +824,6 @@
          </tem:ProcesaStratusResult>
       </tem:ProcesaStratusResponse>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>Stratus</con:name><con:query>declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace tem='http://tempuri.org/';
+//tem:sNoCuenta</con:query><con:match>123</con:match><con:response>Stratus Response</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
