@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="71e50395-98ea-4837-b9a8-824411839cbb" activeEnvironment="Default" name="microcks" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="4722baf7-321d-4943-963a-16e339a79359" wsaVersion="NONE" name="ClaroShopPromocionesWSPortBinding" type="wsdl" bindingName="{http://claroShop.ws/}ClaroShopPromocionesWSPortBinding" soapVersion="1_1" anonymous="optional" definition="file:/home/luis/Escritorio/service.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://cspromocionesws.dev.claroshop.com:8080/WebServices4.0/ClaroShopPromocionesWS</con:endpoint><con:endpoint>http://luis-ThinkPad-L460:8088/service</con:endpoint></con:endpoints><con:operation id="c138121e-1227-4bf2-aee1-e64bf31d18e8" isOneWay="false" action="" name="getPromocionesCS" bindingOperationName="getPromocionesCS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3227d33a-ae6b-47d3-9089-e5231aa8ab3f" name="Servicio Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cspromocionesws.dev.claroshop.com:8080/WebServices4.0/ClaroShopPromocionesWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
+<con:soapui-project id="71e50395-98ea-4837-b9a8-824411839cbb" activeEnvironment="Default" name="microcks" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="4722baf7-321d-4943-963a-16e339a79359" wsaVersion="NONE" name="ClaroShopPromocionesWSPortBinding" type="wsdl" bindingName="{http://claroShop.ws/}ClaroShopPromocionesWSPortBinding" soapVersion="1_1" anonymous="optional" definition="file:/home/luis/Escritorio/service.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://cspromocionesws.dev.claroshop.com:8080/WebServices4.0/ClaroShopPromocionesWS</con:endpoint><con:endpoint>http://luis-ThinkPad-L460:8088/service</con:endpoint></con:endpoints><con:operation id="c138121e-1227-4bf2-aee1-e64bf31d18e8" isOneWay="false" action="" name="getPromocionesCS" bindingOperationName="getPromocionesCS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3227d33a-ae6b-47d3-9089-e5231aa8ab3f" name="Servicio Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-ThinkPad-L460:8088/service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
    <soapenv:Header/>
    <soapenv:Body>
       <clar:getPromocionesCS>
          <!--Optional:-->
-         <compania>?</compania>
+         <compania>3</compania>
       </clar:getPromocionesCS>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="9fb3d5b9-6b9f-4319-a649-cd5d760dc125" port="8088" path="/service" host="luis-ThinkPad-L460" name="Service Mock"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.2</con:value></con:property></con:properties><con:mockOperation name="getPromocionesCS" id="6bfd4d01-57d2-4dba-8e96-60a8f7d314a7" interface="ClaroShopPromocionesWSPortBinding" operation="getPromocionesCS"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Servicio Response" id="61b8485c-79c5-4f88-bb57-f3c67118d82e" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="9fb3d5b9-6b9f-4319-a649-cd5d760dc125" port="8088" path="/service" host="luis-ThinkPad-L460" name="Service Mock" dispatchResponseMessages="true" incomingWss="" outgoingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-version">true</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.3</con:value></con:property></con:properties><con:mockOperation name="getPromocionesCS" id="6bfd4d01-57d2-4dba-8e96-60a8f7d314a7" interface="ClaroShopPromocionesWSPortBinding" operation="getPromocionesCS"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="Servicio Response" id="61b8485c-79c5-4f88-bb57-f3c67118d82e" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
    <soapenv:Header/>
    <soapenv:Body>
       <clar:getPromocionesCSResponse>
          <!--Zero or more repetitions:-->
          <return>
             <!--Optional:-->
-            <compania>?</compania>
+            <compania>Servicio 1</compania>
             <!--Optional:-->
             <descripcion>?</descripcion>
             <!--Optional:-->
@@ -42,4 +42,80 @@
          </return>
       </clar:getPromocionesCSResponse>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSResponse"/></con:response><con:response name="Servicio2 Response" id="069bf8e9-37db-4654-b6b0-0efa4abc7e34" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <clar:getPromocionesCSResponse>
+         <!--Zero or more repetitions:-->
+         <return>
+            <!--Optional:-->
+            <compania>Servicio 2</compania>
+            <!--Optional:-->
+            <descripcion>?</descripcion>
+            <!--Optional:-->
+            <factorMen>?</factorMen>
+            <!--Optional:-->
+            <fechaFin>?</fechaFin>
+            <!--Optional:-->
+            <fechaIni>?</fechaIni>
+            <!--Optional:-->
+            <formaPago>?</formaPago>
+            <!--Optional:-->
+            <montoMin>?</montoMin>
+            <!--Optional:-->
+            <planPago>?</planPago>
+            <!--Optional:-->
+            <plazo>?</plazo>
+            <!--Optional:-->
+            <promInt>?</promInt>
+            <!--Optional:-->
+            <redondeoMen>?</redondeoMen>
+            <!--Optional:-->
+            <secuencia>?</secuencia>
+            <!--Optional:-->
+            <tipo>?</tipo>
+         </return>
+      </clar:getPromocionesCSResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSResponse"/></con:response><con:response name="Servicio3 Response" id="9961afac-ea2c-40ce-99fc-470e923303e8" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <clar:getPromocionesCSResponse>
+         <!--Zero or more repetitions:-->
+         <return>
+            <!--Optional:-->
+            <compania>Servicio 3</compania>
+            <!--Optional:-->
+            <descripcion>?</descripcion>
+            <!--Optional:-->
+            <factorMen>?</factorMen>
+            <!--Optional:-->
+            <fechaFin>?</fechaFin>
+            <!--Optional:-->
+            <fechaIni>?</fechaIni>
+            <!--Optional:-->
+            <formaPago>?</formaPago>
+            <!--Optional:-->
+            <montoMin>?</montoMin>
+            <!--Optional:-->
+            <planPago>?</planPago>
+            <!--Optional:-->
+            <plazo>?</plazo>
+            <!--Optional:-->
+            <promInt>?</promInt>
+            <!--Optional:-->
+            <redondeoMen>?</redondeoMen>
+            <!--Optional:-->
+            <secuencia>?</secuencia>
+            <!--Optional:-->
+            <tipo>?</tipo>
+         </return>
+      </clar:getPromocionesCSResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSResponse"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>Servicio</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace clar='http://claroShop.ws/';
+//compania</con:query><con:match>1</con:match><con:response>Servicio Response</con:response></con:query><con:query><con:name>Servicio2</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace clar='http://claroShop.ws/';
+//compania</con:query><con:match>1</con:match><con:response>Servicio2 Response</con:response></con:query><con:query><con:name>Servicio3</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace clar='http://claroShop.ws/';
+//compania</con:query><con:match>3</con:match><con:response>Servicio3 Response</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
