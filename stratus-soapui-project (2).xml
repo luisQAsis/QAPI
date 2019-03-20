@@ -438,7 +438,7 @@
     </con:operation>
     <con:operation id="34417f20-fc5d-4e1c-ba86-e3f3eb03c6d4" isOneWay="false" action="http://tempuri.org/ProcesaStratus" name="ProcesaStratus" bindingOperationName="ProcesaStratus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
-      <con:call id="55f787a7-f0c3-4e32-bb6e-decae0308169" name="Request 1">
+      <con:call id="55f787a7-f0c3-4e32-bb6e-decae0308169" name="Stratus Request">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -509,7 +509,7 @@
     <con:endpoints>
       
       
-    <con:endpoint>http://luis-ThinkPad-L460:8088/mockValidatorWSPortBinding</con:endpoint><con:endpoint>https://luiscr7.catcoderphp.com/stratus/mockServicioSoap12?WSDL</con:endpoint></con:endpoints>
+    <con:endpoint>http://luis-ThinkPad-L460:8088/mockValidatorWSPortBinding</con:endpoint><con:endpoint>http://luis-ThinkPad-L460:8088/test</con:endpoint><con:endpoint>https://luiscr7.catcoderphp.com/stratus/mockServicioSoap12?WSDL</con:endpoint></con:endpoints>
     <con:operation id="edf8d358-dba9-42c0-a941-24fb67f8b903" isOneWay="false" action="http://tempuri.org/ActualizaItem" name="ActualizaItem" bindingOperationName="ActualizaItem" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
       <con:call id="0eb52322-fec3-447c-b8b3-ad1b109e3215" name="Request 1">
@@ -1028,7 +1028,7 @@
       </con:call>
     </con:operation>
   </con:interface>
-  <con:testSuite id="f4513c1c-13d3-405b-953e-2b381e783177" name="Stratus TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1a240c41-524b-4060-b08d-6fcbd81a2fe8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ProcesaStratus TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="Invalid Card Number Request" id="9614abf2-b1ee-49e6-95a0-313c4fc24191"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Invalid Card Number Request" id="7a4b355a-b581-42a4-a1c0-c7a5621d7d0b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+  <con:testSuite id="f4513c1c-13d3-405b-953e-2b381e783177" name="Stratus TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1a240c41-524b-4060-b08d-6fcbd81a2fe8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ProcesaStratus TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="Invalid Card Number Request" id="9614abf2-b1ee-49e6-95a0-313c4fc24191"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Invalid Card Number Request" id="7a4b355a-b581-42a4-a1c0-c7a5621d7d0b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1076,7 +1076,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="78db4b22-9b7e-4d22-b738-860b07e7a608"/><con:assertion type="SOAP Fault Assertion" id="7258d793-1769-418a-babd-b90b51eb2ffd"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="CVV Invalid Request" id="5c83226c-e88d-496c-8df9-527c6d730b4b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="CVV Invalid Request" id="d66f6e1a-601c-4bd5-8ce9-f8be476c7693"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="78db4b22-9b7e-4d22-b738-860b07e7a608"/><con:assertion type="SOAP Fault Assertion" id="7258d793-1769-418a-babd-b90b51eb2ffd"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="CVV Invalid Request" id="5c83226c-e88d-496c-8df9-527c6d730b4b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="CVV Invalid Request" id="d66f6e1a-601c-4bd5-8ce9-f8be476c7693"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1124,7 +1124,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="89c62c72-96f8-4820-865b-9e609fe8979d"/><con:assertion type="SOAP Fault Assertion" id="4981d2fe-3141-4b8e-8c26-b1316864c714"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Expired Card Request" id="572831ec-cc9f-4aec-bbdf-94a59cf0e522"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Expired Card Request" id="7d8a9bc7-8bc8-4731-b959-ee51c6f7be43"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="89c62c72-96f8-4820-865b-9e609fe8979d"/><con:assertion type="SOAP Fault Assertion" id="4981d2fe-3141-4b8e-8c26-b1316864c714"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Expired Card Request" id="572831ec-cc9f-4aec-bbdf-94a59cf0e522"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Expired Card Request" id="7d8a9bc7-8bc8-4731-b959-ee51c6f7be43"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1172,7 +1172,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7a392ad4-c8f8-4069-b2eb-b8c650084974"/><con:assertion type="SOAP Fault Assertion" id="c8a22f8d-16e5-49fb-a5b9-e58172eadcbf"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Private(Security Box) Request" id="5fd66b16-ce0d-4dd8-865f-d9805d6f4ad9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Private(Security Box) Request" id="e20cdec8-e20e-4acf-a03b-95c5f960ed18"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7a392ad4-c8f8-4069-b2eb-b8c650084974"/><con:assertion type="SOAP Fault Assertion" id="c8a22f8d-16e5-49fb-a5b9-e58172eadcbf"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Private(Security Box) Request" id="5fd66b16-ce0d-4dd8-865f-d9805d6f4ad9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Private(Security Box) Request" id="e20cdec8-e20e-4acf-a03b-95c5f960ed18"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1220,7 +1220,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="930bf0eb-504b-4a32-a3ea-7635233fb5b0"/><con:assertion type="SOAP Fault Assertion" id="ed64f71e-c8eb-4458-b1cb-b13d3967e3a9"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Do not honour Request" id="7e25822f-7756-48ca-9023-fbf76e74f82b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Do not honour Request" id="6c0108f3-4326-41e8-a14d-cc108f126289"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="930bf0eb-504b-4a32-a3ea-7635233fb5b0"/><con:assertion type="SOAP Fault Assertion" id="ed64f71e-c8eb-4458-b1cb-b13d3967e3a9"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Do not honour Request" id="7e25822f-7756-48ca-9023-fbf76e74f82b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Do not honour Request" id="6c0108f3-4326-41e8-a14d-cc108f126289"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1268,7 +1268,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d1a9baa8-82f8-4352-81be-e2e801626da8"/><con:assertion type="SOAP Fault Assertion" id="8de794c4-bd7b-4d0f-aa00-c50c47583321"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Not sufficient founds Request" id="2f2a1f88-6fb2-4d02-97e8-31523df8eebc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Not sufficient founds Request" id="c39c9b46-ad85-4f7a-875d-7461bb34336c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d1a9baa8-82f8-4352-81be-e2e801626da8"/><con:assertion type="SOAP Fault Assertion" id="8de794c4-bd7b-4d0f-aa00-c50c47583321"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Not sufficient founds Request" id="2f2a1f88-6fb2-4d02-97e8-31523df8eebc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Not sufficient founds Request" id="c39c9b46-ad85-4f7a-875d-7461bb34336c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1316,7 +1316,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="17c22bea-117d-4037-8288-9da62967538f"/><con:assertion type="SOAP Fault Assertion" id="28667eab-65c9-406c-806f-f35d6504ea3b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Exceeds withdrawal amount limit Request" id="51f61938-16f3-4a6e-a5d2-56457fa4366e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Exceeds withdrawal amount limit Request" id="5fd827cf-bf34-48d5-8633-a3ceebde0a0b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="17c22bea-117d-4037-8288-9da62967538f"/><con:assertion type="SOAP Fault Assertion" id="28667eab-65c9-406c-806f-f35d6504ea3b"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Exceeds withdrawal amount limit Request" id="51f61938-16f3-4a6e-a5d2-56457fa4366e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Exceeds withdrawal amount limit Request" id="5fd827cf-bf34-48d5-8633-a3ceebde0a0b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1364,7 +1364,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9f2cc166-a774-45eb-8442-b75423fe8cb9"/><con:assertion type="SOAP Fault Assertion" id="04ff5b10-cc4d-4ed7-8af0-876fdc1bdff1"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Exceeds withdrawal frequency limit Request" id="22ed9a4b-c9ad-470c-9da7-1b89b9ab2307"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Exceeds withdrawal frequency limit Request" id="18ff654c-db95-4671-b3d0-2a802901868b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9f2cc166-a774-45eb-8442-b75423fe8cb9"/><con:assertion type="SOAP Fault Assertion" id="04ff5b10-cc4d-4ed7-8af0-876fdc1bdff1"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Exceeds withdrawal frequency limit Request" id="22ed9a4b-c9ad-470c-9da7-1b89b9ab2307"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Exceeds withdrawal frequency limit Request" id="18ff654c-db95-4671-b3d0-2a802901868b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1412,7 +1412,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2fda7900-6087-42d6-95e5-2a4f23dfa079"/><con:assertion type="SOAP Fault Assertion" id="29934e25-2061-493e-857b-9116617e5929"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Refer to card issuer Request" id="b7b83ffc-1ea7-4e99-b12f-22819f9f19c9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Refer to card issuer Request" id="73dae013-e175-438b-8e5b-338d7d6a4976"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2fda7900-6087-42d6-95e5-2a4f23dfa079"/><con:assertion type="SOAP Fault Assertion" id="29934e25-2061-493e-857b-9116617e5929"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Refer to card issuer Request" id="b7b83ffc-1ea7-4e99-b12f-22819f9f19c9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Refer to card issuer Request" id="73dae013-e175-438b-8e5b-338d7d6a4976"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1460,7 +1460,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7504e16b-9163-4b14-bc0c-149cc16cd7f8"/><con:assertion type="SOAP Fault Assertion" id="e6b0e2ab-4bec-40d8-b561-7bdd0a453851"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Private (no accounts) Request" id="e91ef6e8-0869-44f5-897a-c51260e59ccc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Private (no accounts) Request" id="b89c0507-66bb-4541-b966-69cbf5e9b240"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7504e16b-9163-4b14-bc0c-149cc16cd7f8"/><con:assertion type="SOAP Fault Assertion" id="e6b0e2ab-4bec-40d8-b561-7bdd0a453851"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Private (no accounts) Request" id="e91ef6e8-0869-44f5-897a-c51260e59ccc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Private (no accounts) Request" id="b89c0507-66bb-4541-b966-69cbf5e9b240"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8082/mockServicioSoap12?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1700,7 +1700,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="98298580-695d-441b-b421-cbbafcd6efb8"/><con:assertion type="SOAP Fault Assertion" id="99b2e340-e6cc-4ce2-bfd2-6d8b4c61b5a7"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Accept Request" id="62250824-8f5d-4bb7-b771-ebfb19f4e445"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Accept Request" id="76b23393-a50e-4034-bccc-55c0b5aadd74"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="98298580-695d-441b-b421-cbbafcd6efb8"/><con:assertion type="SOAP Fault Assertion" id="99b2e340-e6cc-4ce2-bfd2-6d8b4c61b5a7"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Accept Request" id="62250824-8f5d-4bb7-b771-ebfb19f4e445"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Accept Request" id="76b23393-a50e-4034-bccc-55c0b5aadd74"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1711,7 +1711,7 @@
                <tem:iTienda>?</tem:iTienda>
                <tem:iTipoTransaccion>?</tem:iTipoTransaccion>
                <!--Optional:-->
-               <tem:sNoCuenta>?</tem:sNoCuenta>
+               <tem:sNoCuenta>4111111111111111</tem:sNoCuenta>
                <!--Optional:-->
                <tem:sFechaExp>?</tem:sFechaExp>
                <!--Optional:-->
@@ -1748,7 +1748,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f2c5a2a3-7a33-4cb5-b4b3-d1569e70a989"/><con:assertion type="SOAP Fault Assertion" id="a7ad2fe9-b29b-4331-b30e-6539b82e8d00"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Departamentales Request" id="1e86fab5-0f97-4307-bf69-ed41a9f3d771"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Departamentales Request" id="e2435991-93b6-4e88-83fb-91f8b90d25fc"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f2c5a2a3-7a33-4cb5-b4b3-d1569e70a989"/><con:assertion type="SOAP Fault Assertion" id="a7ad2fe9-b29b-4331-b30e-6539b82e8d00"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Departamentales Request" id="1e86fab5-0f97-4307-bf69-ed41a9f3d771"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Departamentales Request" id="e2435991-93b6-4e88-83fb-91f8b90d25fc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1759,7 +1759,7 @@
                <tem:iTienda>?</tem:iTienda>
                <tem:iTipoTransaccion>?</tem:iTipoTransaccion>
                <!--Optional:-->
-               <tem:sNoCuenta>?</tem:sNoCuenta>
+               <tem:sNoCuenta>505050505050</tem:sNoCuenta>
                <!--Optional:-->
                <tem:sFechaExp>?</tem:sFechaExp>
                <!--Optional:-->
@@ -1796,7 +1796,7 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="530d3f84-1260-425b-91b9-6cc45bf48261"/><con:assertion type="SOAP Fault Assertion" id="2058c2e5-86ae-475f-ba09-913db6c4e803"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Sanborns Request" id="c5f691b1-68ad-4c60-bbad-76cd58de1ed5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Sanborns Request" id="bcfa250c-2d8f-4ac1-a228-85579f70142a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="530d3f84-1260-425b-91b9-6cc45bf48261"/><con:assertion type="SOAP Fault Assertion" id="2058c2e5-86ae-475f-ba09-913db6c4e803"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Sanborns Request" id="c5f691b1-68ad-4c60-bbad-76cd58de1ed5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServicioSoap</con:interface><con:operation>ProcesaStratus</con:operation><con:request name="Sanborns Request" id="bcfa250c-2d8f-4ac1-a228-85579f70142a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint xsi:nil="true"/><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratus>
@@ -1807,7 +1807,7 @@
                <tem:iTienda>?</tem:iTienda>
                <tem:iTipoTransaccion>?</tem:iTipoTransaccion>
                <!--Optional:-->
-               <tem:sNoCuenta>?</tem:sNoCuenta>
+               <tem:sNoCuenta>720001658910</tem:sNoCuenta>
                <!--Optional:-->
                <tem:sFechaExp>?</tem:sFechaExp>
                <!--Optional:-->
@@ -1844,724 +1844,8 @@
          </tem:myInput>
       </tem:ProcesaStratus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="82335951-c32f-4d13-8bb3-f13a1d5a98fd"/><con:assertion type="SOAP Fault Assertion" id="8b97355d-cfb9-4afc-8a2c-159c40a70c64"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="460b4931-82c7-4e05-8cfe-c8908cd6c994" port="443" path="/mockServicioSoap" host="https://luiscr7.catcoderphp.com/stratus" name="MockStratus" bindToHostOnly="false" docroot="" incomingWss="" outgoingWss="">
-    <con:settings>
-      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
-    <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-version">false</con:setting></con:settings>
-    <con:properties><con:property><con:name>version</con:name><con:value>0.1</con:value></con:property></con:properties>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <con:mockOperation name="ProcesaStratus" id="3f53e1a9-1a1b-4427-a16e-532396ff626b" interface="ServicioSoap" operation="ProcesaStratus">
-      <con:settings/>
-      <con:defaultResponse>Accept Response</con:defaultResponse>
-      <con:dispatchStyle>QUERY_MATCH</con:dispatchStyle>
-      <con:response name="Invalid Card Number Response" id="5b29dce6-8548-48fd-afc9-bfed3b6af0b1" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->lunch
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>TarjetaInvalida</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>14</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>14</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>tarjeta invalida</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>tarjeta invalida</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="CVV Invalid Response" id="59914e82-b539-449f-a7bc-29773114ade7" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>CVVInvalido</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>49</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>49</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>CVV invalido</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>CVV invalido</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Expired Card Response" id="89a0e2a4-7c93-4853-b18b-dfd54b80ada3" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>TarjetaExpirada</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>54</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>54</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>tarjeta expirada</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>tarjeta expirada</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Private(Security Box) Response" id="37ce65d7-738d-4a2d-a8d2-04c660f7bfe4" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>CVVIncorrecto</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>82</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>82</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>CVV incorrecto</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>CVV incorrecto</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Do not honour Response" id="37affb6a-8a8d-48f5-9860-d0bd0288921d" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>rechazada</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>05</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>05</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>rechazada</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>rechazada</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Not sufficient founds Response" id="7e6518dd-af91-4175-8307-3db2a52a54ab" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>SaldoInsuficiente</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>51</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>51</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>saldo insuficiente</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>saldo insuficiente</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Exceeds withdrawal amount limit Response" id="dfd91821-e9cf-47a2-8dd4-eedf43be3f7e" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>ExcedeLimitedeMonto</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>61</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>61</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>excede limite de monto</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>excede limite de monto</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Exceeds withdrawal frequency limit Response" id="d8fa0c5a-41b2-4abb-a30a-d56a124af23d" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>ExcedeLimiteDeIntentosDeRetiros</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>65</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>65</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>excede el limite de retiros</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>excede limite de retiros</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Refer to card issuer Response" id="38e85676-f1e2-4801-af76-849ebcdd7f2d" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>Referida</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>01</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>01</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>referida</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>referida</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Private (no accounts) Response" id="ac890957-0dbf-41b8-9575-cd21a4da135a" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>RechazadaSinCuenta</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>83</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>83</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>rechazada sin cuenta</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>rechazada sin cuenta</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Restricted Card Response" id="362d1d0c-498f-4982-896c-47b9a97bf3de" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>BinDeTarjetaNoPermitido</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>62</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>62</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>bin de tarjeta no permitido</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>bin de tarjeta no permitido</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Pick up card Response" id="79ce3c5d-2eb6-4d61-86b5-1f9c4a66e4e9" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>RecogerTarjeta</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>04</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>04</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>recoger tarjeta</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>recoger tarjeta</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Lost Card, Pick up Response" id="8b24d4b9-f607-4588-9cda-e80d811a50de" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>TarjetaPerdida</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>41</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>41</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>tarjeta perdida</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>tarjeta perdida</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Stolen Card, Pick up Response" id="2989228b-dfd2-4b70-bd6e-565cbe074773" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>Tarjetarobada</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>43</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>43</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>tarjeta robada</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>tarjeta robada</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Accept Response" id="584ec8f1-9181-4737-bd41-676b3989a613" httpResponseStatus="200" encoding="UTF-8">
-        <con:settings/>
-        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>Aceptada</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>10</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>00</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>00</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>aceptado</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>aceptado</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/>
-      </con:response>
-      <con:response name="Departamentales Response" id="c977df80-1512-4064-bf22-e1d97f5a73be" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>Aceptado</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>100</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>00</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>00</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>aceptado</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>aceptado</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/></con:response><con:response name="Sanborns Response" id="d17dea38-57be-44a2-9e39-f2207b6bfc45" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:ProcesaStratusResponse>
-         <!--Optional:-->
-         <tem:ProcesaStratusResult>
-            <!--Optional:-->
-            <tem:mySalida>
-               <!--Optional:-->
-               <tem:sMensaje>Aceptado</tem:sMensaje>
-               <!--Optional:-->
-               <tem:sImporte>10</tem:sImporte>
-               <!--Optional:-->
-               <tem:sError>00</tem:sError>
-               <!--Optional:-->
-               <tem:sCodigoRespuesta>00</tem:sCodigoRespuesta>
-               <!--Optional:-->
-               <tem:sCodigoAutorizacion>1</tem:sCodigoAutorizacion>
-            </tem:mySalida>
-            <!--Optional:-->
-            <tem:myError>
-               <tem:Id>1001</tem:Id>
-               <!--Optional:-->
-               <tem:Descripcion>aceptado</tem:Descripcion>
-               <!--Optional:-->
-               <tem:Mensaje>aceptado</tem:Mensaje>
-            </tem:myError>
-         </tem:ProcesaStratusResult>
-      </tem:ProcesaStratusResponse>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ProcesaStratus"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <con:query>
-          <con:name>InvalidCardNumber</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4075595716483764</con:match>
-          <con:response>Invalid Card Number</con:response>
-        </con:query>
-        <con:query>
-          <con:name>CVVInvalid</con:name>
-          <con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
-declare namespace tem='http://tempuri.org/';
-//tem:sNoCuenta</con:query>
-          <con:match>4578470302168090</con:match>
-          <con:response>CVV Invalid</con:response>
-        </con:query>
-        <con:query>
-          <con:name>ExpiredCard</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4085310585624680</con:match>
-          <con:response>Expired Card</con:response>
-        </con:query>
-        <con:query>
-          <con:name>Private</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4389725470609087</con:match>
-          <con:response>Private(Security Box)</con:response>
-        </con:query>
-        <con:query>
-          <con:name>Donothonour</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4160552351914690</con:match>
-          <con:response>Do not honour</con:response>
-        </con:query>
-        <con:query>
-          <con:name>NotSufficientFounds</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4012479431034572</con:match>
-          <con:response>Not sufficient founds</con:response>
-        </con:query>
-        <con:query>
-          <con:name>ExceedsAmmountLimit</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4439443567322669</con:match>
-          <con:response>Exceeds withdrawal amount limit</con:response>
-        </con:query>
-        <con:query>
-          <con:name>ExceedsFrecuencyLimit</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4853780326173322</con:match>
-          <con:response>Exceeds withdrawal frequency limit</con:response>
-        </con:query>
-        <con:query>
-          <con:name>ReferToCardIssuer</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>5474925432670366</con:match>
-          <con:response>Refer to card issuer</con:response>
-        </con:query>
-        <con:query>
-          <con:name>NoAccount</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>5175053810395936</con:match>
-          <con:response>Private (no accounts)</con:response>
-        </con:query>
-        <con:query>
-          <con:name>RestrictedCard</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>5256780826769090</con:match>
-          <con:response>Restricted Card</con:response>
-        </con:query>
-        <con:query>
-          <con:name>PickUpCard</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>341238502489986</con:match>
-          <con:response>Pick up card</con:response>
-        </con:query>
-        <con:query>
-          <con:name>LostCard</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>374032136892032</con:match>
-          <con:response>Lost Card, Pick up</con:response>
-        </con:query>
-        <con:query>
-          <con:name>StolenCard</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>370262521059582</con:match>
-          <con:response>Stolen Card, Pick up</con:response>
-        </con:query>
-        <con:query>
-          <con:name>Accept</con:name>
-          <con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query>
-          <con:match>4111111111111111</con:match>
-          <con:response>Accept</con:response>
-        </con:query>
-      <con:query><con:name>Departamentales</con:name><con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query><con:match>505050505050</con:match><con:response>Departamentales</con:response></con:query><con:query><con:name>Sanborns</con:name><con:query>declare namespace tem="http://tempuri.org/"
-//tem:sNoCuenta</con:query><con:match>720001658910</con:match><con:response>Sanborns</con:response></con:query></con:dispatchConfig>
-    </con:mockOperation>
-  </con:mockService>
-  <con:mockService id="cca94a41-1350-4a40-b740-70b41d8a88bb" port="443" path="/mockServicioSoap12" host="https://luiscr7.catcoderphp.com/stratus" name="MockService12" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.1</con:value></con:property></con:properties><con:mockOperation name="ProcesaStratus" id="b906547a-a849-40d3-949e-5a5ace08eb4f" interface="ServicioSoap12" operation="ProcesaStratus"><con:settings/><con:defaultResponse>Accept Response</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="Invalid Card Number Response" id="b949d57b-091c-4d31-9c1d-c71270e0dc02" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="82335951-c32f-4d13-8bb3-f13a1d5a98fd"/><con:assertion type="SOAP Fault Assertion" id="8b97355d-cfb9-4afc-8a2c-159c40a70c64"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>
+  <con:mockService id="cca94a41-1350-4a40-b740-70b41d8a88bb" port="8082" path="/mockServicioSoap12" host="" name="Stratus Mock" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.1</con:value></con:property></con:properties><con:mockOperation name="ProcesaStratus" id="b906547a-a849-40d3-949e-5a5ace08eb4f" interface="ServicioSoap12" operation="ProcesaStratus"><con:settings/><con:defaultResponse>Exceeds withdrawal amount limit Response</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="Invalid Card Number Response" id="b949d57b-091c-4d31-9c1d-c71270e0dc02" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
    <soapenv:Header/>
    <soapenv:Body>
       <tem:ProcesaStratusResponse>
