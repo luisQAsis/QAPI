@@ -13,11 +13,24 @@
          <pstXML xsi:type="xsd:string">555428</pstXML>
       </ws:GetDatos>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://200.57.163.25/WSPromo/services/DatosTmx/DatosTmx/GetDatosRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="dce45368-783b-4bf2-939a-184d02ddfdef" port="8088" path="/mockDatosTmxSoapBinding" host="luis-ThinkPad-L460" name="DatosTmxSoapBinding Mock"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.3</con:value></con:property></con:properties><con:mockOperation name="GetDatos" id="f5d12fd8-23ee-4848-93f9-a602cef4a7e7" interface="DatosTmxSoapBinding" operation="GetDatos"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="GetDatos Response" id="fffb01a7-cbf5-40af-882a-9acfadd96ce4" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://200.57.163.25/WSPromo/services/DatosTmx">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://200.57.163.25/WSPromo/services/DatosTmx/DatosTmx/GetDatosRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="dce45368-783b-4bf2-939a-184d02ddfdef" port="8088" path="/mockDatosTmxSoapBinding" host="luis-ThinkPad-L460" name="DatosTmxSoapBinding Mock"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.4</con:value></con:property></con:properties><con:mockOperation name="GetDatos" id="f5d12fd8-23ee-4848-93f9-a602cef4a7e7" interface="DatosTmxSoapBinding" operation="GetDatos"><con:settings/><con:defaultResponse>error Response</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder( mockRequest.requestContent )
+def name = holder["//pstXML"]
+if (name == "555428"){
+    return "GetDatos Response"
+}else 
+return "error Response"</con:dispatchPath><con:response name="GetDatos Response" id="fffb01a7-cbf5-40af-882a-9acfadd96ce4" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://200.57.163.25/WSPromo/services/DatosTmx">
    <soapenv:Header/>
    <soapenv:Body>
       <dat:GetDatosResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
          <GetDatosReturn xsi:type="xsd:string">prueba con telmex</GetDatosReturn>
+      </dat:GetDatosResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.163.25/WSPromo/services/DatosTmx/DatosTmx/GetDatosResponse"/></con:response><con:response name="error Response" id="df0ee512-9fbb-46da-9ef7-ef5ed2ad15d5" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://200.57.163.25/WSPromo/services/DatosTmx">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:GetDatosResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <GetDatosReturn xsi:type="xsd:string">erro</GetDatosReturn>
       </dat:GetDatosResponse>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://200.57.163.25/WSPromo/services/DatosTmx/DatosTmx/GetDatosResponse"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>GetDatos</con:name><con:query>declare namespace ws='http://ws.server.tiendaenlinea.telmex.com';
