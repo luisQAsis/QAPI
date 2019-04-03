@@ -1,9 +1,9 @@
 {
 	"info": {
 		"_postman_id": "6f821f81-51de-411d-99a4-dc45579533ee",
-		"name": "example",
-		"description": "version=1.0 - este es el primer ejemplo de mocks con rest",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"name": "Example",
+		"description": "version=1.0 - Este es el primer ejemplo de mocks con rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
