@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="37238658-1c9c-4952-8a22-1cd0f666c002" activeEnvironment="Default" name="Calculator" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f7ecd6d8-e08c-4a19-9288-6e28104f2d37" wsaVersion="NONE" name="CalculatorSoap11Binding" type="wsdl" bindingName="{http://c.b.a}CalculatorSoap11Binding" soapVersion="1_1" anonymous="optional" definition="https://svn.apache.org/repos/asf/airavata/sandbox/xbaya-web/test/Calculator.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://156.56.179.164:9763/services/Calculator.CalculatorHttpSoap11Endpoint/</con:endpoint><con:endpoint>http://luis-ThinkPad-L460:8088/mockCalculatorSoap11Binding</con:endpoint><con:endpoint>https://156.56.179.164:9443/services/Calculator.CalculatorHttpsSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="fe5374e7-4cf4-4f0e-9a88-ba64582ac2ba" isOneWay="false" action="urn:add" name="add" bindingOperationName="add" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8a85e7d2-0b25-4e49-aa8b-ecde4c3e94fd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://156.56.179.164:9763/services/Calculator.CalculatorHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:c="http://c.b.a">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <c:add>
+         <!--Optional:-->
+         <c:n1>?</c:n1>
+         <!--Optional:-->
+         <c:n2>?</c:n2>
+      </c:add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:add"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="48131c5c-a183-484b-bb9c-66769e3c151f" wsaVersion="NONE" name="CalculatorSoap12Binding" type="wsdl" bindingName="{http://c.b.a}CalculatorSoap12Binding" soapVersion="1_2" anonymous="optional" definition="https://svn.apache.org/repos/asf/airavata/sandbox/xbaya-web/test/Calculator.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://156.56.179.164:9763/services/Calculator.CalculatorHttpSoap12Endpoint/</con:endpoint><con:endpoint>https://156.56.179.164:9443/services/Calculator.CalculatorHttpsSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="c716fd59-a819-4c66-a365-08a959450a6c" isOneWay="false" action="urn:add" name="add" bindingOperationName="add" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="356ef3ff-877c-41ce-8cde-5eda7d4900a3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://156.56.179.164:9763/services/Calculator.CalculatorHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:c="http://c.b.a">
+   <soap:Header/>
+   <soap:Body>
+      <c:add>
+         <!--Optional:-->
+         <c:n1>?</c:n1>
+         <!--Optional:-->
+         <c:n2>?</c:n2>
+      </c:add>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:add"/></con:call></con:operation></con:interface><con:testSuite id="c5e9bb79-2183-4e97-a15b-0f1b36e54714" name="CalculatorSoap11Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e5981ae3-852d-4124-9edc-8fb95ba8c6f5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="add TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="8edf5a66-fe21-4c80-a90a-af5ad2699c25" name="calc Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap11Binding</con:interface><con:operation>add</con:operation><con:request name="calc Request" id="fb08f6a4-d837-4782-815a-c482081da04c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8088/mockCalculatorSoap11Binding?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:c="http://c.b.a">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <c:add>
+         <!--Optional:-->
+         <c:n1>?</c:n1>
+         <!--Optional:-->
+         <c:n2>2</c:n2>
+      </c:add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:add" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="d5c31ed7-b6d6-44bd-a458-89c237c2b2c9" port="8088" path="/mockCalculatorSoap11Binding" host="luis-ThinkPad-L460" name="CalculatorSoap11Binding MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>10</con:value></con:property></con:properties><con:mockOperation name="add" id="df89ec85-d576-4507-8d74-b32157e466d4" interface="CalculatorSoap11Binding" operation="add"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="calc Response" id="15c122b5-3afc-48e4-84a7-baa8c9c1e90d" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:c="http://c.b.a">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <c:addResponse>
+         <!--Optional:-->
+         <c:return>saludos</c:return>
+      </c:addResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:add"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>calc</con:name><con:query>declare namespace c='http://c.b.a';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//c:n2</con:query><con:match>2</con:match><con:response>calc Response</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
