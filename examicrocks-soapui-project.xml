@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="b53e03ae-650b-4ebf-a9c4-7782d5d9c65d" activeEnvironment="Default" name="examicrocks" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="431fa01f-586f-4661-b11c-c0207b5b5862" wsaVersion="NONE" name="ValidatorWSPortBinding" type="wsdl" bindingName="{http://NipValidatorWS/}ValidatorWSPortBinding" soapVersion="1_1" anonymous="optional" definition="https://raw.githubusercontent.com/luisQAsis/QAPI/master/wsdl/nip/WebServices6.0_ValidatorWS.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://luis-ThinkPad-L460:8088/ValidatorWSPortBinding+Mock/20</con:endpoint><con:endpoint>https://luiscr7.catcoderphp.com/nip/mockValidatorWSPortBinding</con:endpoint></con:endpoints><con:operation id="e644d8c5-7267-46b8-bbfa-fe587b903673" isOneWay="false" action="" name="Validate" bindingOperationName="Validate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f0fb3081-398d-445b-a23f-62669f39fd64" name="Example Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://microcks.apps.dev.amxnova.net/soap/HelloService+Mock/0.9</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://www.example.com/hello">
-   <soapenv:Header/>
+<con:soapui-project id="b53e03ae-650b-4ebf-a9c4-7782d5d9c65d" activeEnvironment="Default" name="ValidatorWSPortBinding" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="431fa01f-586f-4661-b11c-c0207b5b5862" wsaVersion="NONE" name="ValidatorWSPortBinding" type="wsdl" bindingName="{http://NipValidatorWS/}ValidatorWSPortBinding" soapVersion="1_1" anonymous="optional" definition="https://raw.githubusercontent.com/luisQAsis/QAPI/master/wsdl/nip/WebServices6.0_ValidatorWS.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://luis-ThinkPad-L460:8088/ValidatorWSPortBinding+Mock/20</con:endpoint><con:endpoint>https://luiscr7.catcoderphp.com/nip/mockValidatorWSPortBinding</con:endpoint></con:endpoints><con:operation id="e644d8c5-7267-46b8-bbfa-fe587b903673" isOneWay="false" action="" name="Validate" bindingOperationName="Validate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f0fb3081-398d-445b-a23f-62669f39fd64" name="Example Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://microcks.apps.dev.amxnova.net/soap/HelloService+Mock/0.9</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://www.example.com/hello">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.example.com/hello" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="sayHello" type="tns:sayHello"/>
+      <xs:element name="sayHelloResponse" type="tns:sayHelloResponse"/>
+      <xs:complexType name="sayHello">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sayHelloResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sayHello" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="HelloException" type="tns:HelloException"/>
+      <xs:complexType name="HelloException">
+        <xs:sequence>
+          <xs:element name="code" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloException">
+    <wsdl:part element="tns:HelloException" name="HelloException"/>
+  </wsdl:message>
+  <wsdl:message name="sayHelloResponse">
+    <wsdl:part element="tns:sayHelloResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="sayHello">
+    <wsdl:part element="tns:sayHello" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="HelloService">
+    <wsdl:operation name="sayHello">
+      <wsdl:input message="tns:sayHello" name="sayHello"/>
+      <wsdl:output message="tns:sayHelloResponse" name="sayHelloResponse"/>
+      <wsdl:fault message="tns:HelloException" name="HelloException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloServiceSoapBinding" type="tns:HelloService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sayHello">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sayHello">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sayHelloResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="HelloException">
+        <soap:fault name="HelloException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloService">
+    <wsdl:port binding="tns:HelloServiceSoapBinding" name="HelloServiceEndpointPort">
+      <soap:address location="http://localhost:8080/services/HelloService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://lbroudoux-OSX.local:8088/mockHelloService</con:endpoint><con:endpoint>http://localhost:8080/services/HelloService</con:endpoint></con:endpoints><con:operation id="5261f947-dc07-401e-9f1c-5735a1094b5b" isOneWay="false" action="" name="sayHello" bindingOperationName="sayHello" type="Request-Response" outputName="sayHelloResponse" inputName="sayHello" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2376da51-82e3-4342-afd1-ddd6ae10bfa5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soap/HelloService Mock/0.9/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  
+ 
+<soapenv:Header/>
    <soapenv:Body>
       <hel:sayHello>
          <name>Andrew</name>
