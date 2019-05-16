@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="e552a639-9abc-4090-bf4b-f9f1ea92480e" activeEnvironment="Default" name="HelloService" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="783222fa-5cb6-4bdd-a909-b1f40765e42d" wsaVersion="NONE" name="Hello_Binding" type="wsdl" bindingName="{http://www.examples.com/wsdl/HelloService.wsdl}Hello_Binding" soapVersion="1_1" anonymous="optional" definition="file:/home/luis/Escritorio/HelloService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://luis-ThinkPad-L460:8088/mockHello_Binding</con:endpoint><con:endpoint>http://www.examples.com/SayHello/</con:endpoint></con:endpoints><con:operation id="39441493-973d-45b1-9c07-58019a55e8a2" isOneWay="false" action="sayHello" name="sayHello" bindingOperationName="sayHello" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1623473-5cd1-4a89-aa90-6febcb66ae70" name="Luis Request"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8088/mockHello_Binding?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:examples:helloservice">
-   <soapenv:Header/>
+  
+<definitions name="HelloService"
+   targetNamespace="http://www.examples.com/wsdl/HelloService.wsdl"
+   xmlns="http://schemas.xmlsoap.org/wsdl/"
+   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ 
+   <message name="SayHelloRequest">
+      <part name="firstName" type="xsd:string"/>
+   </message>
+	
+   <message name="SayHelloResponse">
+      <part name="greeting" type="xsd:string"/>
+   </message>
+
+   <portType name="Hello_PortType">
+      <operation name="sayHello">
+         <input message="tns:SayHelloRequest"/>
+         <output message="tns:SayHelloResponse"/>
+      </operation>
+   </portType>
+
+   <binding name="Hello_Binding" type="tns:Hello_PortType">
+      <soap:binding style="rpc"
+         transport="http://schemas.xmlsoap.org/soap/http"/>
+      <operation name="sayHello">
+         <soap:operation soapAction="sayHello"/>
+         <input>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:examples:helloservice"
+               use="encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:examples:helloservice"
+               use="encoded"/>
+         </output>
+      </operation>
+   </binding>
+
+   <service name="Hello_Service">
+      <documentation>WSDL File for HelloService</documentation>
+      <port binding="tns:Hello_Binding" name="Hello_Port">
+         <soap:address
+            location="http://www.examples.com/SayHello/" />
+      </port>
+   </service>
+</definitions>
+
+
+
+
+
+ <soapenv:Header/>
    <soapenv:Body>
       <urn:sayHello soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
          <firstName xsi:type="xsd:string">Luis</firstName>
