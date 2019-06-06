@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0078c294-d589-4017-bc99-616a6c21ad20" activeEnvironment="Default" name="Servicios" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="cd2cc5aa-3248-4c13-aa74-ac01df03031b" wsaVersion="NONE" name="BasicHttpBinding_IServicios" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IServicios" soapVersion="1_1" anonymous="optional" definition="/home/luis/Escritorio/nuevaIbrodoux/servicios.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/home/luis/Escritorio/nuevaIbrodoux/servicios.wsdl"><con:part><con:url>file:/home/luis/Escritorio/nuevaIbrodoux/servicios.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Servicios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+      <xs:element name="Proveedor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedor" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="RFC" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Apellido_Paterno" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Apellido_Materno" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Calle" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoInterior" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoExterior" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Colonia" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="CP" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Pais" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="CLABE" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Titular" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Banco" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedorFin" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorResult" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorGuia">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Datos" nillable="true" type="q1:ArrayOfeProveedorGuiaEnt" xmlns:q1="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorGuiaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorGuiaResult" nillable="true" type="q2:ArrayOfeProveedorGuiaSal" xmlns:q2="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorIMR">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Datos" nillable="true" type="q3:ArrayOfeProveedorIMREnt" xmlns:q3="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorIMRResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorIMRResult" nillable="true" type="q4:ArrayOfeProveedorIMRSal" xmlns:q4="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorComision">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Datos" nillable="true" type="q5:ArrayOfeProveedorComisionEnt" xmlns:q5="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorComisionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorComisionResult" nillable="true" type="q6:ArrayOfeProveedorComisionSal" xmlns:q6="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorComisionXmlPdf">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedor" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorComisionXmlPdfResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorComisionXmlPdfResult" type="q7:eProveedorComisionXmlPdfSal" xmlns:q7="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorEvidencia">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedor" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoPedido" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoGuia" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="docNombre" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="docBase64" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="docTipo" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="GuiaTipo" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="GuiaTotal" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="RfcProveedor" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorEvidenciaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorEvidenciaResult" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorPDFRelPagos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedor" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoPago" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorPDFRelPagosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorPDFRelPagosResult" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorIMRPago">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FInicial" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FFinal" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedorFin" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorIMRPagoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorIMRPagoResult" nillable="true" type="q8:ArrayOfeProveedorIMRPago" xmlns:q8="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorComisionUUID">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="NoProveedor" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FInicial" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FFinal" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProveedorComisionUUIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProveedorComisionUUIDResult" nillable="true" type="q9:ArrayOfeProveedorComisionUUID" xmlns:q9="http://schemas.datacontract.org/2004/07/WcfMarketplace"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfMarketplace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/WcfMarketplace">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xs:complexType name="ArrayOfeProveedorGuiaEnt">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorGuiaEnt" type="tns:eProveedorGuiaEnt"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorGuiaEnt" nillable="true" type="tns:ArrayOfeProveedorGuiaEnt"/>
+      <xs:complexType name="eProveedorGuiaEnt">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha_Guia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Guia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedido" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Piezas" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorGuiaEnt" nillable="true" type="tns:eProveedorGuiaEnt"/>
+      <xs:complexType name="ArrayOfeProveedorGuiaSal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorGuiaSal" type="tns:eProveedorGuiaSal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorGuiaSal" nillable="true" type="tns:ArrayOfeProveedorGuiaSal"/>
+      <xs:complexType name="eProveedorGuiaSal">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha_Guia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Guia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedido" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Piezas" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorGuiaSal" nillable="true" type="tns:eProveedorGuiaSal"/>
+      <xs:complexType name="ArrayOfeProveedorIMREnt">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorIMREnt" type="tns:eProveedorIMREnt"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorIMREnt" nillable="true" type="tns:ArrayOfeProveedorIMREnt"/>
+      <xs:complexType name="eProveedorIMREnt">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Guia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IMR" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedido" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="docNombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorIMREnt" nillable="true" type="tns:eProveedorIMREnt"/>
+      <xs:complexType name="ArrayOfeProveedorIMRSal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorIMRSal" type="tns:eProveedorIMRSal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorIMRSal" nillable="true" type="tns:ArrayOfeProveedorIMRSal"/>
+      <xs:complexType name="eProveedorIMRSal">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Guia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IMR" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedido" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="docNombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorIMRSal" nillable="true" type="tns:eProveedorIMRSal"/>
+      <xs:complexType name="ArrayOfeProveedorComisionEnt">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorComisionEnt" type="tns:eProveedorComisionEnt"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorComisionEnt" nillable="true" type="tns:ArrayOfeProveedorComisionEnt"/>
+      <xs:complexType name="eProveedorComisionEnt">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedidos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Total" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorComisionEnt" nillable="true" type="tns:eProveedorComisionEnt"/>
+      <xs:complexType name="ArrayOfeProveedorComisionSal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorComisionSal" type="tns:eProveedorComisionSal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorComisionSal" nillable="true" type="tns:ArrayOfeProveedorComisionSal"/>
+      <xs:complexType name="eProveedorComisionSal">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedidos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Total" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorComisionSal" nillable="true" type="tns:eProveedorComisionSal"/>
+      <xs:complexType name="eProveedorComisionXmlPdfSal">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pdf" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Xml" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorComisionXmlPdfSal" nillable="true" type="tns:eProveedorComisionXmlPdfSal"/>
+      <xs:complexType name="ArrayOfeProveedorIMRPago">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorIMRPago" type="tns:eProveedorIMRPago"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorIMRPago" nillable="true" type="tns:ArrayOfeProveedorIMRPago"/>
+      <xs:complexType name="eProveedorIMRPago">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FCarga" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IMR" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pago" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorIMRPago" nillable="true" type="tns:eProveedorIMRPago"/>
+      <xs:complexType name="ArrayOfeProveedorComisionUUID">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eProveedorComisionUUID" type="tns:eProveedorComisionUUID"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfeProveedorComisionUUID" nillable="true" type="tns:ArrayOfeProveedorComisionUUID"/>
+      <xs:complexType name="eProveedorComisionUUID">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Folio" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pedidos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Total" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="eProveedorComisionUUID" nillable="true" type="tns:eProveedorComisionUUID"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicios_Proveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Proveedor"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_Proveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorGuia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorGuia"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorGuia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorGuiaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorIMR_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorIMR"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorIMR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorIMRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorComision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorComision"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorComision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorComisionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorComisionXmlPdf_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorComisionXmlPdf"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorComisionXmlPdf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorComisionXmlPdfResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorEvidencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorEvidencia"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorEvidencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorEvidenciaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorPDFRelPagos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorPDFRelPagos"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorPDFRelPagos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorPDFRelPagosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorIMRPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorIMRPago"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorIMRPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorIMRPagoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorComisionUUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorComisionUUID"/>
+  </wsdl:message>
+  <wsdl:message name="IServicios_ProveedorComisionUUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProveedorComisionUUIDResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IServicios">
+    <wsdl:operation name="Proveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/Proveedor" message="tns:IServicios_Proveedor_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorResponse" message="tns:IServicios_Proveedor_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorGuia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorGuia" message="tns:IServicios_ProveedorGuia_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorGuiaResponse" message="tns:IServicios_ProveedorGuia_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorIMR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorIMR" message="tns:IServicios_ProveedorIMR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorIMRResponse" message="tns:IServicios_ProveedorIMR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorComision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorComision" message="tns:IServicios_ProveedorComision_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorComisionResponse" message="tns:IServicios_ProveedorComision_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorComisionXmlPdf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorComisionXmlPdf" message="tns:IServicios_ProveedorComisionXmlPdf_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorComisionXmlPdfResponse" message="tns:IServicios_ProveedorComisionXmlPdf_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorEvidencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorEvidencia" message="tns:IServicios_ProveedorEvidencia_InputMessage" name="ProveedorEvidencia"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorEvidenciaResponse" message="tns:IServicios_ProveedorEvidencia_OutputMessage" name="ProveedorEvidenciaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorPDFRelPagos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorPDFRelPagos" message="tns:IServicios_ProveedorPDFRelPagos_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorPDFRelPagosResponse" message="tns:IServicios_ProveedorPDFRelPagos_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorIMRPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorIMRPago" message="tns:IServicios_ProveedorIMRPago_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorIMRPagoResponse" message="tns:IServicios_ProveedorIMRPago_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorComisionUUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ProveedorComisionUUID" message="tns:IServicios_ProveedorComisionUUID_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ProveedorComisionUUIDResponse" message="tns:IServicios_ProveedorComisionUUID_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicios" type="tns:IServicios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Proveedor">
+      <soap:operation soapAction="http://tempuri.org/IServicios/Proveedor" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorGuia">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorGuia" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorIMR">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorIMR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorComision">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorComision" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorComisionXmlPdf">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorComisionXmlPdf" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorEvidencia">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorEvidencia" style="document"/>
+      <wsdl:input name="ProveedorEvidencia">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ProveedorEvidenciaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorPDFRelPagos">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorPDFRelPagos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorIMRPago">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorIMRPago" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveedorComisionUUID">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ProveedorComisionUUID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicios">
+    <wsdl:port name="BasicHttpBinding_IServicios" binding="tns:BasicHttpBinding_IServicios">
+      <soap:address location="http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint></con:endpoints><con:operation id="a2f53757-8311-488c-b5d9-22b423b48df6" isOneWay="false" action="http://tempuri.org/IServicios/Proveedor" name="Proveedor" bindingOperationName="Proveedor" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="af2df067-a78e-4acc-aa50-171043ebf6af" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Proveedor>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:RFC>?</tem:RFC>
+         <!--Optional:-->
+         <tem:Nombres>?</tem:Nombres>
+         <!--Optional:-->
+         <tem:Apellido_Paterno>?</tem:Apellido_Paterno>
+         <!--Optional:-->
+         <tem:Apellido_Materno>?</tem:Apellido_Materno>
+         <!--Optional:-->
+         <tem:Calle>?</tem:Calle>
+         <!--Optional:-->
+         <tem:NoInterior>?</tem:NoInterior>
+         <!--Optional:-->
+         <tem:NoExterior>?</tem:NoExterior>
+         <!--Optional:-->
+         <tem:Colonia>?</tem:Colonia>
+         <!--Optional:-->
+         <tem:Ciudad>?</tem:Ciudad>
+         <!--Optional:-->
+         <tem:CP>?</tem:CP>
+         <!--Optional:-->
+         <tem:Estado>?</tem:Estado>
+         <!--Optional:-->
+         <tem:Pais>?</tem:Pais>
+         <!--Optional:-->
+         <tem:Telefono>?</tem:Telefono>
+         <!--Optional:-->
+         <tem:correo>?</tem:correo>
+         <!--Optional:-->
+         <tem:CLABE>?</tem:CLABE>
+         <!--Optional:-->
+         <tem:Tipo>?</tem:Tipo>
+         <!--Optional:-->
+         <tem:Titular>?</tem:Titular>
+         <!--Optional:-->
+         <tem:Banco>?</tem:Banco>
+         <!--Optional:-->
+         <tem:NoProveedorFin>?</tem:NoProveedorFin>
+      </tem:Proveedor>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/Proveedor"/></con:call></con:operation><con:operation id="6b0581c6-b9ba-4339-b2f3-90ec69208a6f" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorComision" name="ProveedorComision" bindingOperationName="ProveedorComision" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f50b9b9e-baf3-4108-8c54-b841637258df" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:wcf="http://schemas.datacontract.org/2004/07/WcfMarketplace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorComision>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:Datos>
+            <!--Zero or more repetitions:-->
+            <wcf:eProveedorComisionEnt>
+               <!--Optional:-->
+               <wcf:Fecha>?</wcf:Fecha>
+               <!--Optional:-->
+               <wcf:Pedidos>?</wcf:Pedidos>
+               <!--Optional:-->
+               <wcf:Proveedor>?</wcf:Proveedor>
+               <!--Optional:-->
+               <wcf:Tipo>?</wcf:Tipo>
+               <!--Optional:-->
+               <wcf:Total>?</wcf:Total>
+            </wcf:eProveedorComisionEnt>
+         </tem:Datos>
+      </tem:ProveedorComision>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorComision"/></con:call></con:operation><con:operation id="d6cc7f9b-c4ff-48de-9669-e3bb49200bca" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorComisionUUID" name="ProveedorComisionUUID" bindingOperationName="ProveedorComisionUUID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5115c2c0-2cf6-41e1-b6b7-2d3e31199c80" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorComisionUUID>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:FInicial>?</tem:FInicial>
+         <!--Optional:-->
+         <tem:FFinal>?</tem:FFinal>
+         <!--Optional:-->
+         <tem:Tipo>?</tem:Tipo>
+      </tem:ProveedorComisionUUID>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorComisionUUID"/></con:call></con:operation><con:operation id="600ff797-58e4-4946-be78-8d6b5a125f8d" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorComisionXmlPdf" name="ProveedorComisionXmlPdf" bindingOperationName="ProveedorComisionXmlPdf" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f5ae8c6c-7ac2-47c1-8d86-02da7744c06e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorComisionXmlPdf>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:Fecha>?</tem:Fecha>
+         <!--Optional:-->
+         <tem:Tipo>?</tem:Tipo>
+      </tem:ProveedorComisionXmlPdf>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorComisionXmlPdf"/></con:call></con:operation><con:operation id="3f02b7e7-eaa2-4cf4-8678-bf9bdb41cac2" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorEvidencia" name="ProveedorEvidencia" bindingOperationName="ProveedorEvidencia" type="Request-Response" inputName="ProveedorEvidencia" receivesAttachments="false" sendsAttachments="false" anonymous="optional" outputName="ProveedorEvidenciaResponse"><con:settings/><con:call id="fd711367-2409-42b6-8f15-3235ebf22abb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8081/mockServicios?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidencia>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:NoPedido>?</tem:NoPedido>
+         <!--Optional:-->
+         <tem:NoGuia>?</tem:NoGuia>
+         <!--Optional:-->
+         <tem:docNombre>unCv4REkCPmBZcZ6NM9DEQ==</tem:docNombre>
+         <!--Optional:-->
+         <tem:docBase64>?</tem:docBase64>
+         <!--Optional:-->
+         <tem:docTipo>?</tem:docTipo>
+         <!--Optional:-->
+         <tem:GuiaTipo>?</tem:GuiaTipo>
+         <!--Optional:-->
+         <tem:GuiaTotal>?</tem:GuiaTotal>
+         <!--Optional:-->
+         <tem:RfcProveedor>?</tem:RfcProveedor>
+      </tem:ProveedorEvidencia>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorEvidencia"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="de14f0d3-db9c-41c8-8c36-5f977e87170b" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorGuia" name="ProveedorGuia" bindingOperationName="ProveedorGuia" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="be8b63a9-1b8d-4bc0-8bc3-4c3ac4fc30b5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:wcf="http://schemas.datacontract.org/2004/07/WcfMarketplace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorGuia>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:Datos>
+            <!--Zero or more repetitions:-->
+            <wcf:eProveedorGuiaEnt>
+               <!--Optional:-->
+               <wcf:Fecha_Guia>?</wcf:Fecha_Guia>
+               <!--Optional:-->
+               <wcf:Guia>?</wcf:Guia>
+               <!--Optional:-->
+               <wcf:Pedido>?</wcf:Pedido>
+               <!--Optional:-->
+               <wcf:Piezas>?</wcf:Piezas>
+               <!--Optional:-->
+               <wcf:Proveedor>?</wcf:Proveedor>
+               <!--Optional:-->
+               <wcf:SKU>?</wcf:SKU>
+            </wcf:eProveedorGuiaEnt>
+         </tem:Datos>
+      </tem:ProveedorGuia>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorGuia"/></con:call></con:operation><con:operation id="ecbed6b4-d6f0-439c-82c6-b7f344119914" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorIMR" name="ProveedorIMR" bindingOperationName="ProveedorIMR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2071760-ba13-436d-8882-17d670efb4eb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:wcf="http://schemas.datacontract.org/2004/07/WcfMarketplace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorIMR>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:Datos>
+            <!--Zero or more repetitions:-->
+            <wcf:eProveedorIMREnt>
+               <!--Optional:-->
+               <wcf:Guia>?</wcf:Guia>
+               <!--Optional:-->
+               <wcf:IMR>?</wcf:IMR>
+               <!--Optional:-->
+               <wcf:Pedido>?</wcf:Pedido>
+               <!--Optional:-->
+               <wcf:Proveedor>?</wcf:Proveedor>
+               <!--Optional:-->
+               <wcf:Tipo>?</wcf:Tipo>
+               <!--Optional:-->
+               <wcf:docNombre>?</wcf:docNombre>
+            </wcf:eProveedorIMREnt>
+         </tem:Datos>
+      </tem:ProveedorIMR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorIMR"/></con:call></con:operation><con:operation id="058559a2-d1f7-4a22-b70a-716a783f9ad1" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorIMRPago" name="ProveedorIMRPago" bindingOperationName="ProveedorIMRPago" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="abc4963f-350c-426a-98ab-d652d942a664" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorIMRPago>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:FInicial>?</tem:FInicial>
+         <!--Optional:-->
+         <tem:FFinal>?</tem:FFinal>
+         <!--Optional:-->
+         <tem:NoProveedorFin>?</tem:NoProveedorFin>
+      </tem:ProveedorIMRPago>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorIMRPago"/></con:call></con:operation><con:operation id="94827600-3b67-48f6-b230-bfe129ea5d39" isOneWay="false" action="http://tempuri.org/IServicios/ProveedorPDFRelPagos" name="ProveedorPDFRelPagos" bindingOperationName="ProveedorPDFRelPagos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ca54073-7032-4953-ab0c-8e57b0c50d16" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://admin.sears.com.mx/WcfMarketplace/Servicios.svc/WcfMarketplace.Servicios</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorPDFRelPagos>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:NoPago>?</tem:NoPago>
+      </tem:ProveedorPDFRelPagos>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorPDFRelPagos"/></con:call></con:operation></con:interface><con:testSuite id="1f96fd17-71b3-4164-bd80-17d03e661634" name="Servicios TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7e83b7af-21f8-411d-9319-62492c35aaef" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ProveedorEvidencia TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="917f6c24-e965-4c11-9cce-1a6f00b954dc" name="Happy Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IServicios</con:interface><con:operation>ProveedorEvidencia</con:operation><con:request name="Happy Request" id="eb0fd6cc-a0c8-429e-9987-18eb821ca709"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8082/mockServicios?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidencia>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:NoPedido>?</tem:NoPedido>
+         <!--Optional:-->
+         <tem:NoGuia>?</tem:NoGuia>
+         <!--Optional:-->
+         <tem:docNombre>unCv4REkCPmBZcZ6NM9DEQ==</tem:docNombre>
+         <!--Optional:-->
+         <tem:docBase64>?</tem:docBase64>
+         <!--Optional:-->
+         <tem:docTipo>?</tem:docTipo>
+         <!--Optional:-->
+         <tem:GuiaTipo>?</tem:GuiaTipo>
+         <!--Optional:-->
+         <tem:GuiaTotal>?</tem:GuiaTotal>
+         <!--Optional:-->
+         <tem:RfcProveedor>?</tem:RfcProveedor>
+      </tem:ProveedorEvidencia>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/IServicios/ProveedorEvidencia" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Happyp Request" id="71f7afb9-f355-4665-9794-01748b1c7783"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IServicios</con:interface><con:operation>ProveedorEvidencia</con:operation><con:request name="Happyp Request" id="d4f7cac8-5123-4631-a163-49f745d92f64"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8082/mockServicios?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidencia>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:NoPedido>?</tem:NoPedido>
+         <!--Optional:-->
+         <tem:NoGuia>?</tem:NoGuia>
+         <!--Optional:-->
+         <tem:docNombre>unCv4REkCPnLRCEBXj26zQ==</tem:docNombre>
+         <!--Optional:-->
+         <tem:docBase64>?</tem:docBase64>
+         <!--Optional:-->
+         <tem:docTipo>?</tem:docTipo>
+         <!--Optional:-->
+         <tem:GuiaTipo>?</tem:GuiaTipo>
+         <!--Optional:-->
+         <tem:GuiaTotal>?</tem:GuiaTotal>
+         <!--Optional:-->
+         <tem:RfcProveedor>?</tem:RfcProveedor>
+      </tem:ProveedorEvidencia>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="fc4c2a40-2474-4270-89da-7f8913968e15"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Xmlno Request" id="3b3250cb-f04a-493a-8793-b4f2ae8be207"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IServicios</con:interface><con:operation>ProveedorEvidencia</con:operation><con:request name="Xmlno Request" id="e2cc0cf3-2266-4e61-b6bf-a10de9e4505b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8082/mockServicios?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidencia>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:NoPedido>?</tem:NoPedido>
+         <!--Optional:-->
+         <tem:NoGuia>?</tem:NoGuia>
+         <!--Optional:-->
+         <tem:docNombre>1mHPhbiXIy//gAwWH+BMzA==</tem:docNombre>
+         <!--Optional:-->
+         <tem:docBase64>?</tem:docBase64>
+         <!--Optional:-->
+         <tem:docTipo>?</tem:docTipo>
+         <!--Optional:-->
+         <tem:GuiaTipo>?</tem:GuiaTipo>
+         <!--Optional:-->
+         <tem:GuiaTotal>?</tem:GuiaTotal>
+         <!--Optional:-->
+         <tem:RfcProveedor>?</tem:RfcProveedor>
+      </tem:ProveedorEvidencia>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0d155d63-e344-47c0-b79a-f65a275dd967"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Xmlnov Request" id="c791678b-ccca-4990-958a-e8f56a2454a4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IServicios</con:interface><con:operation>ProveedorEvidencia</con:operation><con:request name="Xmlnov Request" id="0c285080-204a-4430-9725-edfb4daed159"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8082/mockServicios?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidencia>
+         <!--Optional:-->
+         <tem:token>?</tem:token>
+         <!--Optional:-->
+         <tem:NoProveedor>?</tem:NoProveedor>
+         <!--Optional:-->
+         <tem:NoPedido>?</tem:NoPedido>
+         <!--Optional:-->
+         <tem:NoGuia>?</tem:NoGuia>
+         <!--Optional:-->
+         <tem:docNombre>tImXn0Nzh7Dn4kALRQ8ikA==</tem:docNombre>
+         <!--Optional:-->
+         <tem:docBase64>?</tem:docBase64>
+         <!--Optional:-->
+         <tem:docTipo>?</tem:docTipo>
+         <!--Optional:-->
+         <tem:GuiaTipo>?</tem:GuiaTipo>
+         <!--Optional:-->
+         <tem:GuiaTotal>?</tem:GuiaTotal>
+         <!--Optional:-->
+         <tem:RfcProveedor>?</tem:RfcProveedor>
+      </tem:ProveedorEvidencia>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d0163025-9339-4e95-9763-dbda7d44f92f"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="bb502085-8722-4be8-a649-cca7b72d37ce" port="8082" path="/mockServicios" host="luis-ThinkPad-L460" name="Servicios Mock" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.6</con:value></con:property></con:properties><con:mockOperation name="ProveedorEvidencia" id="df40432d-d2e5-42f5-b9d2-b363d19075e2" interface="BasicHttpBinding_IServicios" operation="ProveedorEvidencia"><con:settings/><con:defaultResponse>Xmlno Response</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="Happy Response" id="c7b2ea59-4ff1-4502-b330-78a0ec28658d" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidenciaResponse>
+         <!--Optional:-->
+         <tem:ProveedorEvidenciaResult>EuNlZzgR2bl5ZNX2I4UzQLSAG6zWHgjOjE9VFj+w+i4=</tem:ProveedorEvidenciaResult>
+      </tem:ProveedorEvidenciaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorEvidencia"/></con:response><con:response name="Happyp Response" id="cc88a603-9ba5-42e5-991a-0985c30e9b1a" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidenciaResponse>
+         <!--Optional:-->
+         <tem:ProveedorEvidenciaResult>EuNlZzgR2bl5ZNX2I4UzQLSAG6zWHgjOjE9VFj+w+i4=</tem:ProveedorEvidenciaResult>
+      </tem:ProveedorEvidenciaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorEvidencia"/></con:response><con:response name="Xmlno Response" id="4da498be-09e2-4bec-a044-9eeaa3f332dc" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidenciaResponse>
+         <!--Optional:-->
+         <tem:ProveedorEvidenciaResult>D5BwUmTCyyOnWjmib4faujUEFknzz7+eGU9u48uCzBFNhFxOlj7W8r+NJGQDqX9kImLgEn8jSt4glhs0r7xzlQ==</tem:ProveedorEvidenciaResult>
+      </tem:ProveedorEvidenciaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorEvidencia"/></con:response><con:response name="Xmlnov Response" id="3eee16cc-bb7c-4ac2-98f4-b5bdd47454ce" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProveedorEvidenciaResponse>
+         <!--Optional:-->
+         <tem:ProveedorEvidenciaResult>D5BwUmTCyyOnWjmib4faujUEFknzz7+eGU9u48uCzBFNhFxOlj7W8r+NJGQDqX9kImLgEn8jSt4glhs0r7xzlQ==</tem:ProveedorEvidenciaResult>
+      </tem:ProveedorEvidenciaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IServicios/ProveedorEvidencia"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>Happy</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace tem='http://tempuri.org/';
+//tem:docNombre</con:query><con:match>unCv4REkCPmBZcZ6NM9DEQ==</con:match><con:response>Happy Response</con:response></con:query><con:query><con:name>Happyp</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace tem='http://tempuri.org/';
+//tem:docNombre</con:query><con:match>unCv4REkCPnLRCEBXj26zQ==</con:match><con:response>Happyp Response</con:response></con:query><con:query><con:name>Xmlno</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace tem='http://tempuri.org/';
+//tem:docNombre</con:query><con:match>1mHPhbiXIy//gAwWH+BMzA==</con:match><con:response>Xmlno Response</con:response></con:query><con:query><con:name>Xmlnov</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace tem='http://tempuri.org/';
+//tem:docNombre</con:query><con:match>tImXn0Nzh7Dn4kALRQ8ikA==</con:match><con:response>Xmlnov Response</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
