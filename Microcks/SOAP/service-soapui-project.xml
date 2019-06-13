@@ -13,8 +13,8 @@
   </message>
   <portType name="ClaroShopPromocionesWS">
     <operation name="getPromocionesCS">
-      <input wsam:Action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCS" message="tns:getPromocionesCS"/>
-      <output wsam:Action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSResponse" message="tns:getPromocionesCSResponse"/>
+      <input wsam:Action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCS" message="tns:getPromocionesCS" name="getPromocionesCS"/>
+      <output wsam:Action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSResponse" message="tns:getPromocionesCSResponse" name="getPromocionesCSResponse"/>
     </operation>
   </portType>
   <binding name="ClaroShopPromocionesWSPortBinding" type="tns:ClaroShopPromocionesWS">
@@ -34,7 +34,7 @@
       <soap:address location=""/>
     </port>
   </service>
-</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://luis-ThinkPad-L460:8089/mockService</con:endpoint></con:endpoints><con:operation id="5bf24525-f736-416a-bafd-a5049d8f6ece" isOneWay="false" action="" name="getPromocionesCS" bindingOperationName="getPromocionesCS" inputName="getPromocionesCS" receivesAttachments="false" sendsAttachments="false" anonymous="optional" outputName="getPromocionesCSResponse" type="Request-Response"><con:settings/><con:call id="e27a935e-dca1-4abf-95f4-907f64a310d7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8088/mockService?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://luis-ThinkPad-L460:8089/mockService</con:endpoint></con:endpoints><con:operation id="5bf24525-f736-416a-bafd-a5049d8f6ece" isOneWay="false" action="" name="getPromocionesCS" bindingOperationName="getPromocionesCS" inputName="getPromocionesCS" receivesAttachments="false" sendsAttachments="false" anonymous="optional" type="Request-Response" outputName="getPromocionesCSResponse"><con:settings/><con:call id="e27a935e-dca1-4abf-95f4-907f64a310d7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://luis-thinkpad-l460:8089/mockService?WSDL</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clar="http://claroShop.ws/">
    <soapenv:Header/>
    <soapenv:Body>
       <clar:getPromocionesCS/>
@@ -44,7 +44,7 @@
    <soapenv:Body>
       <clar:getPromocionesCS/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1e00d427-b9ab-4193-afc3-5c81067b3d6e" port="8089" path="/mockService" host="luis-ThinkPad-L460" name="service Mock" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.2</con:value></con:property></con:properties><con:mockOperation name="getPromocionesCS" id="054b6f61-fea6-481e-be40-3c61cac40f0b" interface="ClaroShopPromocionesWSPortBinding" operation="getPromocionesCS"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>import com.eviware.soapui.support.XmlHolder
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://claroShop.ws/ClaroShopPromocionesWS/getPromocionesCSRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1e00d427-b9ab-4193-afc3-5c81067b3d6e" port="8089" path="/mockService" host="luis-ThinkPad-L460" name="service Mock" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>0.3</con:value></con:property></con:properties><con:mockOperation name="getPromocionesCS" id="054b6f61-fea6-481e-be40-3c61cac40f0b" interface="ClaroShopPromocionesWSPortBinding" operation="getPromocionesCS"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>import com.eviware.soapui.support.XmlHolder
 
 
     return "getPromo Response"
