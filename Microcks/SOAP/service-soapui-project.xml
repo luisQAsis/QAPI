@@ -30,7 +30,7 @@
     </operation>
   </binding>
   <service name="ClaroShopPromocionesWS">
-    <port name="ClaroShopPromocionesWSPort" binding="tns:ClaroShopPromocionesWS">
+    <port name="ClaroShopPromocionesWS" binding="tns:ClaroShopPromocionesWS">
       <soap:address location="https://microcks.apps.dev.amxnova.net/soap/service+Mock/0.4"/>
     </port>
   </service>
