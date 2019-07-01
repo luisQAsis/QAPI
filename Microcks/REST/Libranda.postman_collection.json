@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "7ef20dc5-dfa0-4f21-a95f-f43ce8b582b6",
+		"name": "Libranda",
+		"description": "version=1.0 - Colección con la que se hace una conexión al servicio libranda por parte de Sanbrons\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"user_code\": \"9998\",\n\"first_name\": \"Isaac\",\n\"last_name\": \"Trenado\",\n\"email\": \"super_chinazo@gmail.com\",\n\"phone\": \"5555555555\"\n}"
+				},
+				"url": {
+					"raw": "http:///user",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"user"
+					]
+				},
+				"description": "Creación de usuario en libranda"
+			},
+			"response": [
+				{
+					"name": "Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"user_code\": \"9998\",\n\"first_name\": \"Isaac\",\n\"last_name\": \"Trenado\",\n\"email\": \"luis7qa@gmail.com\",\n\"phone\": \"5555555555\"\n}"
+						},
+						"url": {
+							"raw": "http:///user",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"user_code 9998 already exists\"\n}"
+				},
+				{
+					"name": "CreateSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"user_code\": \"9998\",\n\"first_name\": \"Isaac\",\n\"last_name\": \"Trenado\",\n\"email\": \"super_chinazo@gmail.com\",\n\"phone\": \"5555555555\"\n}"
+						},
+						"url": {
+							"raw": "http:///user",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Isaac\",\n    \"user_code\": \"9998\",\n    \"last_name\": \"Trenado\",\n    \"email\": \"super_chinazo@gmail.com\",\n    \"phone\": \"5555555555\"\n}"
+				}
+			]
+		},
+		{
+			"name": "purchase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"order_code\":\"9999\",\n\n    \"order_datetime\":\"2019-06-27T16:29:00\",\n\n    \"user\":\"9999-1\",\n\n    \"lines\":[\n    \t{\n\n      \"line_code\": \"1\",\n\n      \"product\": \"9782897652845\",\n\n      \"quantity\": 1,\n\n      \"amount_tax_excl\": 120.11,\n\n      \"amount_tax_incl\": 142.99\n    \t}\n\n      ]\n\n    \n\n}"
+				},
+				"url": {
+					"raw": "http:///purchase",
+					"host": [
+						"http:"
+					],
+					"port": "",
+					"path": [
+						"",
+						"",
+						"purchase"
+					]
+				},
+				"description": "Se crea una nueva orden de compra"
+			},
+			"response": [
+				{
+					"name": "purchaseError",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"order_code\":\"9999\",\n\n    \"order_datetime\":\"2019-06-27T16:29:00\",\n\n    \"user\":\"9999-1\",\n\n    \"lines\":[\n    \t{\n\n      \"line_code\": \"1\",\n\n      \"product\": \"9782897652846\",\n\n      \"quantity\": 1,\n\n      \"amount_tax_excl\": 120.11,\n\n      \"amount_tax_incl\": 142.99\n    \t}\n\n      ]\n\n    \n\n}"
+						},
+						"url": {
+							"raw": "http:///purchase",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"purchase"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"Order Code already exists\"\n}"
+				},
+				{
+					"name": "purchase",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"order_code\":\"9999\",\n\n    \"order_datetime\":\"2019-06-27T16:29:00\",\n\n    \"user\":\"9999-1\",\n\n    \"lines\":[\n{\n\n      \"line_code\": \"1\",\n\n      \"product\": \"9782897652845\",\n\n      \"quantity\": 1,\n\n      \"amount_tax_excl\": 120.11,\n\n      \"amount_tax_incl\": 142.99\n}\n      ]\n\n    \n\n}"
+						},
+						"url": {
+							"raw": "http:///purchase",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"purchase"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"product\": \"9782897652845\",\n        \"accessURL\": \"https://viewer.sanborns.binpar.cloud/login/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDE1MzVhY2VkMzk0ZTAwMWNiOTNmMjkiLCJpYXQiOjE1NjE2NzE0OTksImF1ZCI6Imh0dHBzOi8vdmlld2VyLnNhbmJvcm5zLmJpbnBhci5jbG91ZCJ9.EGeGnzDTRudv3wYZhTiRhZjV0I4YV5P-i5LcFVktpic\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "94964960-1d03-4eb7-a198-02ef46ac4629",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bb581e08-97cb-4ff5-8a24-2c6c01b95f44",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
