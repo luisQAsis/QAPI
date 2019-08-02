@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "42b1bf95-fc60-4c1b-917a-d3a25cbeec9f",
 		"name": "APP-Mock",
-		"description": "version = 1.0 - Home en APP",
+		"description": "version =1.1 - Mocks de app",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
