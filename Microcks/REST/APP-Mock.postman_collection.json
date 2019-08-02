@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "42b1bf95-fc60-4c1b-917a-d3a25cbeec9f",
+		"name": "APP-Mock",
+		"description": "version = 1.0 - Home en APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://5d24c59c-0243-49b6-ba4c-0a1934376e1f.mock.pstmn.io",
+					"protocol": "https",
+					"host": [
+						"5d24c59c-0243-49b6-ba4c-0a1934376e1f",
+						"mock",
+						"pstmn",
+						"io"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get_Home",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.myjson.com/bins/knl31",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myjson",
+								"com"
+							],
+							"path": [
+								"bins",
+								"knl31"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": ""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Aug 2019 00:13:56 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"af-MmpVeTvfnSW88c4riXD0uw\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=0b1063bf78f23555"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=8789ccaa9c7bb1ce"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":\"succes\",\"message\":\"ok\",\"data\":{\"geo\":{\"direccion\":\"Enviar a Antonio, CDMX.92.10\"},\"banners\":[{\"id\":1,\"tag\":\"promo1\",\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d41c5e0bc5c3_spa-leaterjpg.jpg\",\"action\":\"categoria\"},{\"id\":2,\"tag\":\"promo2\",\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d41ca03ac1d8_banner-lo-mas-buscado2jpg.jpg\",\"action\":\"producto\"},{\"id\":3,\"tag\":\"promo3\",\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d41e0b5c8cfe_middle-chicopng.jpg\",\"action\":\"landing\"}],\"accesos\":[{\"id\":1,\"img\":\"https://resources.claroshop.com/medios-plazavip/swift/v1/app/icon/todas.png\",\"name\":\"todas las categorías\",\"action\":\"menu\"},{\"id\":2,\"img\":\"https://resources.claroshop.com/medios-plazavip/swift/v1/app/icon/celulares.png\",\"name\":\"Celulares y telefonía\",\"action\":\"landing\"},{\"id\":3,\"img\":\"https://resources.claroshop.com/medios-plazavip/swift/v1/app/icon/electronica.png\",\"name\":\"Electrónica y tecnología\",\"action\":\"categorias\"},{\"id\":4,\"img\":\"https://resources.claroshop.com/medios-plazavip/swift/v1//app/icon/videojuegos.png\",\"name\":\"Videojuegos\",\"action\":\"producto\"},{\"id\":5,\"img\":\"https://resources.claroshop.com/medios-plazavip/swift/v1/app/icon/hogar.png\",\"name\":\"Hogar y jardín\",\"action\":\"categoria\"}],\"top_products\":[{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/s2/10723/1090452/5ce898387a9d1-koral-3080-404271-1-zoom2-200x200.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}}],\"stores\":[{\"id\":233,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d432d1f64def_6redlemonslide-tiendas-oficialespng.jpg?scale=375\",\"name\":\"Michel Dommit\",\"action\":\"tienda\"},{\"id\":233,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d432d1f64def_6redlemonslide-tiendas-oficialespng.jpg?scale=375\",\"name\":\"Michel Dommit\",\"action\":\"tienda\"},{\"id\":233,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d432d1f64def_6redlemonslide-tiendas-oficialespng.jpg?scale=375\",\"name\":\"Michel Dommit\",\"action\":\"tienda\"}],\"emarsys_products\":[{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35632,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}}]}}"
+				},
+				{
+					"name": "Get_Home2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.myjson.com/bins/faon1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"myjson",
+								"com"
+							],
+							"path": [
+								"bins",
+								"faon1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": ""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Aug 2019 00:13:56 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"af-MmpVeTvfnSW88c4riXD0uw\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=0b1063bf78f23555"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=8789ccaa9c7bb1ce"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":\"succes\",\"message\":\"ok\",\"data\":{\"emarsys_products\":[{\"id\":32,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":33,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":34,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":35,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":36,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":37,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":38,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":39,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"false\"}},{\"id\":40,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}},{\"id\":41,\"img\":\"https://resources.claroshop.com/medios-plazavip/publicidad/5d1e85ba84c07_xiaomimi9t_negrojpg.jpg?scale=200\",\"title\":\"JEANS A7, CORTE RECTO\",\"sale_price\":2479,\"discount\":20,\"promotion\":{\"month\":\"3MSI\",\"free_shipping\":\"true\"}}]}}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a3d76fa0-33e2-4aed-a11a-2b3f3d54a865",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "027b6bce-e9b9-414d-8839-9c165524e2f7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
