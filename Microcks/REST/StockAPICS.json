@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "bfc4ae24-e9a6-4827-a6bd-a1617a776336",
+		"name": "StockAPICS Copy",
+		"description": "version=1.0 -Servicio para consultar stock en tiendas y sucursales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FindStockBySku",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0a299bd-e28d-43f7-8316-0cdc7a570154",
+						"exec": [
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/stock/product/shop/1/sku/:sku",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"stock",
+						"product",
+						"shop",
+						"1",
+						"sku",
+						":sku"
+					],
+					"variable": [
+						{
+							"key": "sku",
+							"value": "{{sku}}"
+						}
+					]
+				},
+				"description": "Metodo para obtener el detalle de un producto a partir de id de tienda y el sku"
+			},
+			"response": []
+		},
+		{
+			"name": "FindSubsidiaryStockBySku",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "258a0946-7d86-4410-a61f-635edde86c8e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/stock/product/shop/1/sku/:sku/detail?",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"stock",
+						"product",
+						"shop",
+						"1",
+						"sku",
+						":sku",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "pagina que se desea obtener",
+							"disabled": true
+						},
+						{
+							"key": "page_size",
+							"value": "1",
+							"description": "tamaño de la pagina que se desea obtener",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "sku",
+							"value": "{{sku}}"
+						}
+					]
+				},
+				"description": "\t\nMetodo para obtener el detalle de un producto a partir del sku sobre las tiendas donde se encuentra el producto."
+			},
+			"response": []
+		},
+		{
+			"name": "FindStockByEan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43589e73-4e7d-4277-b986-668cb476b474",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/stock/product/shop/1/ean/:ean?",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"stock",
+						"product",
+						"shop",
+						"1",
+						"ean",
+						":ean"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"description": "pagina que se desea obtener",
+							"disabled": true
+						},
+						{
+							"key": "page_size",
+							"value": "1",
+							"description": "tamaño de la pagina que se desea obtener",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "ean",
+							"value": ""
+						}
+					]
+				},
+				"description": "\t\nMetodo para obtener el detalle de un producto a partir del ean sobre las tiendas donde se encuentra el producto."
+			},
+			"response": []
+		},
+		{
+			"name": "FindSubsidiaryStockByEan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d650039-df3f-451d-8196-bfcc2e9ed878",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/stock/product/shop/1/ean/:ean/detail?",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"stock",
+						"product",
+						"shop",
+						"1",
+						"ean",
+						":ean",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "",
+							"description": "pagina que se desea obtener",
+							"disabled": true
+						},
+						{
+							"key": "page_size",
+							"value": "1",
+							"description": "tamaño de la pagina que se desea obtener",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "ean",
+							"value": "{{ean}}"
+						}
+					]
+				},
+				"description": "\t\nMetodo para obtener el detalle de un producto a partir del ean sobre la sucursal donde se encuentra el producto."
+			},
+			"response": []
+		},
+		{
+			"name": "SetHoldProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49f6887f-dc30-4f3b-a459-1e8e2ffbfc02",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order_id\": 229922,\n  \"quantity\":  3,\n  \"sku\": \"SKURYZEN2700\",\n  \"shop_id\": 1,\n  \"channel_sale_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/api/stock/product/set-on-hold",
+				"description": "agrega el producto como apartado"
+			},
+			"response": []
+		},
+		{
+			"name": "SetConfirm",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "da381677-104b-450e-9c42-a27fb74a1837",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order_id\": 229922,\n  \"quantity\": 1,\n  \"sku\": \"SKURYZEN2700\",\n  \"shop_id\": 1,\n  \"channel_sale_id\": 1,\n  \"subsidiary_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/stock/product/confirm?",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"stock",
+						"product",
+						"confirm"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+							"disabled": true
+						}
+					]
+				},
+				"description": "De acuerdo al numero de orden de los productos que fueron puestos en on hold son sacados del apartado y descuenta del stock global"
+			},
+			"response": []
+		},
+		{
+			"name": "post_Cancel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsdWlzX2NyNyIsImV4cCI6MTU4MzQzNDM3MX0.jjgzpitlvVHr26pgECV7zb1Ru6PUcXmTd_xsPzt7NAHqYrt0u1LYJzmv3SB1S9y9iTMayvI_EDLJ3lQCJZ4llw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order_id\": 229922,\n  \"quantity\": 2,\n  \"sku\": \"SKURYZEN2700\",\n  \"shop_id\": 1,\n  \"channel_sale_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/api/stock/product/cancel",
+				"description": "De acuerdo al numero de orden de los productos que fueron puestos en on hold son sacados del apartado y los vuelve agregar al stock general"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "91899f29-ecb6-4136-999b-ed7df81609f6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cb45c3ce-1f75-4138-8ac2-e06f616abf69",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Existe algún error: \"+\" \" + pm.response.json().metadata.is_error , function () {",
+					"    var jsonData = pm.response.json();",
+					"    pm.expect(jsonData.metadata.is_error).to.eql(false);",
+					"    ",
+					"});",
+					"",
+					"pm.test(\"Codigo Http: \" +\" \" + pm.response.code, function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+					"});"
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
